@@ -20,6 +20,8 @@ h1{
     color: white;
     padding: 40px;
     font-family: "DMSansRegular";
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 .header h1{
     text-align: center;
@@ -33,6 +35,8 @@ h1{
     background-color: #2a2a2a;
     text-align: center;
     font-family: "DMSansRegular";
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 .topnav a{
     color: white;
@@ -45,11 +49,11 @@ h1{
 .topnav a:hover{
     color: rgb(100, 100, 100);
 }
-
 .footer{
     background-color: #2a2a2a;
     text-align: center;
     font-family: "DMSansRegular";
+    border-radius: 20px;
 }
 .footer h1{
     text-align: center;
@@ -61,6 +65,9 @@ h1{
     background-color: #2a2a2a;
     text-align: center;
     font-family: "DMSansRegular";
+    border-radius: 40px;
+    padding: 20px;
+    margin: 50px;
 }
 .main h1{
     background-color: #2a2a2a;
