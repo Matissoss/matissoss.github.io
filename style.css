@@ -3,146 +3,145 @@
     src: url(fonts/DMSansFont.ttf);
 }
 
-body{
-    background-color: black;
+body {
+    background-image: url(images/website-images/Background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #948D54;
+}
+h1 {
     font-family: DMSans;
+    font-size: 7vw;
+    color: #948D54;
 }
-.top{
-    background-color: rgb(55, 55, 55);
-    text-align: left;
-    display: flex;
-    align-items: center;
-}
-.top img{
-    float: none;
-    margin: auto;
-    border-radius: 10px;
-}
-.topbar{
-    padding: 10px;
-    font-size: 22px;
-}
-.topbar a{
-    background-color: black;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
+
+.link {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 65px;
+    border-radius: 125px;    
+    border: 10px solid black;
+    background-color: #FFF59A;
+    font-size: 3vw;
+    color: #948D54;
+    font-family: DMSans;
+    text-align: center;
     text-decoration: none;
 }
-.topbar a:hover{
-    background-color: white;
-    color: black;
-    text-decoration: underline;
-}
-.topbar p{
-    color: white;
-    font-size: 15px;
-}
-.mainTitle{
-    padding: 10px;
-    margin-top: 10px;
-    text-align: center;
-}
-.main{
-    font-size: 20px;
-    color: white;
-    text-align: center;
-}
-.main a{
-    background-color: black;
-    color: white;
-    border: 5px;
-    border-color: white;
-    font-size: 20px;
-    padding: 10px;
-}
-.main a:hover{
-    background-color: white;
-    color: black;
-    border: 10px;
-    border-radius: 10px;
-    font-size: 20px;
-}
-.game{
-    color: white;
-    text-align: center;
-    font-size: 20px;
-}
-.game img{
-    border-radius: 10px;
-}
-.game a{
-    background-color: rgb(55, 55, 55);
-    color:white;
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 10px;
-}
-.game a:hover{
-    background-color: white;
-    color:black;
-    text-decoration: underline;
-}
-.game table{
-    background-color: rgb(55, 55, 55);
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.game td{
-    margin: auto;
-    padding: 15px;
-}
-.site{
-    background-color: rgb(55, 55, 55);
-    border-radius: 10px;
-    text-align: center;
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.site p{
-    color: white;
-}
-.site a{
-    color:white;
-    padding: 10px;
-    border-radius: 10px;
-    text-decoration: none;
-}
-.site a:hover{
-    color: black;
-    text-decoration: underline;
-    background-color: white;
+
+.link:hover {
+    background-color: #9CD07B;
+    color: #648A4C;
 }
 
-
-.devlog{
-    margin: auto;
-    background-color: rgb(55, 55, 55);
-    border-radius: 20px;
-}
-.devlog a{
-    color: white;
-}
-.devlog h2{
-    font-size: 20px;
+.banner {
+    margin: 5vw 0;
 }
 
+.game {
+    display: inline-block;
+    text-align: center;
+    margin: 2vw;
+    width: 20vw;
+    height: 30vw;
+    position: static;
+    transition: all 0.3s;
+}
 
-@media (max-width: 650px) {
-    .top{
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
+.game:hover {
+    margin: 1vw;
+    width: 21vw;
+    height: 31vw;
+}
+
+.site {
+    display: inline-block;
+    margin: 1vw;
+    width: 15vw;
+    height: 15vw;
+    transition: all 0.3s;
+}
+
+.site:hover {
+    width: 16vw;
+    height: 16vw;
+}
+p{
+    font-family: DMSans;
+    color: #948D54;
+}
+h2{
+    font-family: DMSans;
+    color: #948D54;
+    size: 7vw;
+    margin: 2vw;
+}
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 15vw;
     }
-    .topbar{
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-    } 
-    .topbar a{
-        width: 100%;
-        padding: 10px;
+    .banner{
+        width: 80%;
+        height: 80%;
+    }
+    .link {
+        font-size: 6vw;
+        padding: 10px 30px;
+        width: 80%;
+    }
+    
+    .game {
+        width: 80vw;
+        height: 60vw;
+        margin: 5vw 0;
+    }
+    
+    .game:hover {
+        width: 82vw;
+        height: 62vw;
+        margin: 4vw 0;
+    }
+    
+    .site {
+        width: 20%;
+        height: 20%;
+        margin: 10vw 0;
+    }
+    
+    .site:hover {
+        width: 42vw;
+        height: 42vw;
+    }
+    img{
+        width: 80%;
+        height: 80%;
+    }
+}
+@media (max-width: 1400px){
+    body{
+        background-image: url("images/website-images/AltBackground.svg");
+        text-align: center;
+    }
+    .banner{
+        width: 80%;
+        height: 80%;
+    }
+    .site {
+        width: 20%;
+        height: 20%;
+        margin: 10vw 0;
+    }
+    
+    .site:hover {
+        width: 42vw;
+        height: 42vw;
     }
 }
