@@ -99,6 +99,53 @@ h2{
     margin-bottom: 0vw;
     height: 45%;
 }
+
+.request{
+    border: 0.75vw solid black;
+    border-radius: 45px;
+    font-family: DMSans;
+    font-size: 1vw;
+    text-align: center;
+    color: #948D54;
+    width: 50%;
+    background-color: #FFF59A;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    padding: 0.5vw;
+    padding-bottom: 4.5%;
+}
+.request h2{
+    margin: 0;
+}
+.request input{
+    background-color: #FFF59A;
+    border: 0.3vw solid black;
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+    font-family: DMSans;
+    width: 30%;
+    height: 100%;
+}
+.request textarea{
+    background-color: #FFF59A;
+    border: 0.3vw solid black;
+    border-radius: 0.5vw;
+    padding: 1vw;
+}
+.sendRequest{
+    width: 80%;
+    height: 80%;
+    color: #948D54;
+}
+.sendRequest:hover{
+    width: 35%;
+    height: 100%;
+}
 @media (max-width: 1000px) {
     h1 {
         font-size: 15vw;
@@ -147,6 +194,34 @@ h2{
         width: 50%;
         height: 50%;
     }
+    .request{
+        width: 80%;
+        height: 80%;
+        border: 2vw solid black;
+        font-size: 2.5vw;
+        border-radius: 5vw;
+        text-align: center;
+    }
+    .request input{
+        width: 80%;
+        height: 80%;
+        border: 2vw solid black;
+        font-size: 2vw;
+        border-radius: 2vw; 
+        text-align: center;
+    }
+    .request textarea{
+        border: 2vw solid black;
+        border-radius: 2vw;
+    }
+    .sendRequest{
+        width: 80%;
+        height: 80%;
+    }
+    .sendRequest:hover{
+        width: 35%;
+        height: 100%;
+    }
 }
 @media (max-width: 1400px){
     body{
@@ -166,5 +241,23 @@ h2{
     .site:hover {
         width: 25%;
         height: 25%;
+    }
+    .request{
+        width: 80%;
+        height: 80%;
+        border: 150% solid black;
+    }
+    .request input{
+        width: 80%;
+        height: 80%;
+        border: 150% solid black;
+    }
+    .sendRequest{
+        width: 80%;
+        height: 80%;
+    }
+    .sendRequest:hover{
+        width: 35%;
+        height: 100%;
     }
 }
