@@ -5,25 +5,27 @@
         <meta charset="UTF-8">
         <meta name="description" content="Matissoss GameDev official page">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel = "icon" type="image/x-icon" href="images/promo-images/Favicon.svg">
+        <link rel = "icon" type="image/x-icon" href="images/Logo.png">
     </head>
     <body>
-        <h1>
-            Home
-        </h1>
-        <a class="link" href="index.html">
-            Home
-        </a>
-        <a class="link" href="games.html">
-            Games
-        </a>
-        <a class="link" href="sites.html">
-            Sites
-        </a>
-        <a class="link" href="contact.html">
-            Contact
-        </a>
-        <img src = "images/website-images/WelcomeBanner.svg" class="banner">
-        <img src = "images/website-images/AboutMeBanner.svg" class="banner">
+        <div class="container">
+            <div class="centerdiv" id="password">
+                <h1>MSYS</h1>
+                <br>
+                <h2>ENTER YOUR PASSWORD</h2>
+                <br>
+                <input placeholder="ENTER PASSWORD HERE" id = "passwordEnter">
+                <br>
+                <h2 id = "passwordReminder"></h2>
+                <button onclick = "checkPassword()"> LOG IN </button>
+                <button onclick = "password()">PASSWORD REMINDER</button>
+            </div>
+            <div class="invisible" id="proceed">
+                <h1>PROCEED</h1>
+                <button onclick="clickedYes()">YES</button>
+                <button onclick="clickedNo()">NO</button>
+            </div>
+        </div>
+        <script src = "scripts/password.js"></script>
     </body>
 </html>

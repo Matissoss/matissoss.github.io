@@ -1,263 +1,169 @@
 @font-face {
-    font-family: DMSans;
-    src: url(fonts/DMSansFont.ttf);
+    font-family: MatrixFont;
+    src: url(fonts/MatrixFont.ttf);
 }
 
-body {
-    background-image: url(images/website-images/Background.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+body{
+    background-color: black;
     text-align: center;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-a{
-    text-decoration: none;
-    color: #948D54;
-}
-h1 {
-    font-family: DMSans;
-    font-size: 7vw;
-    color: #948D54;
 }
 
-.link {
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 65px;
-    border-radius: 125px;    
-    border: 10px solid black;
-    background-color: #FFF59A;
-    font-size: 3vw;
-    color: #948D54;
-    font-family: DMSans;
+.container {
+    position: relative;
+    height: 100vh;
+}
+.centerdiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1vw;
     text-align: center;
-    text-decoration: none;
-    transition: all 0.6s;
+}
+.invisible{
+    display: none;
 }
 
-.link:hover {
-    background-color: #9CD07B;
-    color: #648A4C;
-}
-
-.banner {
-    margin: 5vw 0;
-}
-
-.game {
-    display: inline-block;
-    text-align: center;
-    margin: 1%;
-    width: 15%;
-    height: 15%;
-    position: static;
-    transition: all 0.6s;
-}
-
-.game:hover {
-    margin: 0%;
-    width: 17.5%;
-    height: 17.5%;
-}
-
-.site {
-    display: inline-block;
-    margin: 1vw;
-    width: 15vw;
-    height: 15vw;
-    transition: all 0.6s;
-}
-
-.site:hover {
-    width: 17vw;
-    height: 17vw;
-}
 p{
-    font-family: DMSans;
-    color: #948D54;
-}
-h2{
-    font-family: DMSans;
-    color: #948D54;
-    size: 7vw;
-    margin: 2vw;
+    color:#00ff00;
+    font-size: 0.35vw;
 }
 
-.mail{
-    margin-top: 2vw;
-    width: 35%;
-    height: 35%;
-    margin-bottom: 2vw;
-    transition: all 0.6s;
-}
-.mail:hover{
-    width: 45%;
-    margin-top: 0vw;
-    margin-bottom: 0vw;
-    height: 45%;
-}
-
-.request{
-    border: 0.75vw solid black;
-    border-radius: 45px;
-    font-family: DMSans;
-    font-size: 1vw;
-    text-align: center;
-    color: #948D54;
-    width: 50%;
-    background-color: #FFF59A;
-    height: 80%;
+h1{
+    color: #00ff00;
+    margin-top: 1.25vw;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-    padding: 0.5vw;
-    padding-bottom: 4.5%;
+    margin-bottom: 0.25vw;
+    font-size: 8vw;
+    font-family: MatrixFont;
 }
-.request h2{
-    margin: 0;
+h2{
+    color: #00ff00;
+    margin-top: 0.125vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.25vw;
+    font-size: 1.5vw;
+    font-family: MatrixFont;
 }
-.request input{
-    background-color: #FFF59A;
-    border: 0.3vw solid black;
-    border-radius: 0.5vw;
+input{
+    background-color: black;
     padding: 0.5vw;
-    margin-bottom: 1vw;
+    height: 2.5vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    width: 22.5vw;
+    color: #00ff00;
+    font-family: MatrixFont;
+    border: #00ff00 solid 0.25vw;
+    font-size: 1.25vw;
+    text-align: center;
+}
+
+button{
     margin-top: 1vw;
-    font-family: DMSans;
-    width: 30%;
-    height: 100%;
-}
-.request textarea{
-    background-color: #FFF59A;
-    border: 0.3vw solid black;
-    border-radius: 0.5vw;
+    background-color: black;
+    color: #00ff00;
     padding: 1vw;
+    font-family: MatrixFont;
+    font-size: 1.75vw;
+    border: none;
+    transition: 0.1s;
+    text-align: center;
+    width: 19.2vw;
+    height: 7vw;
+    margin-left: auto;
+    margin-right: auto;
 }
-.sendRequest{
-    width: 80%;
-    height: 80%;
-    color: #948D54;
+td{
+    margin-left: 1vw;
+    padding: 2vw;
 }
-.sendRequest:hover{
-    width: 35%;
-    height: 100%;
+button:hover{
+    background-color: #00ff00;
+    color: black;
 }
-@media (max-width: 1000px) {
-    h1 {
-        font-size: 15vw;
-    }
-    .banner{
-        width: 80%;
-        height: 80%;
-    }
-    .link {
-        font-size: 6vw;
-        padding: 10px 30px;
-        width: 80%;
-    }
-    
-    .game {
-        width: 80vw;
-        height: 60vw;
-        margin: 5vw 0;
-    }
-    
-    .game:hover {
-        width: 82vw;
-        height: 62vw;
-        margin: 4vw 0;
-    }
-    
-    .site {
-        width: 20%;
-        height: 20%;
-        margin: 10vw 0;
-    }
-    
-    .site:hover {
-        width: 25%;
-        height: 25%;
-    }
-    img{
-        width: 80%;
-        height: 80%;
-    }
-    .mail{
-        width: 40%;
-        height: 40%;
-    }
-    .mail:hover{
-        width: 50%;
-        height: 50%;
-    }
-    .request{
-        width: 80%;
-        height: 80%;
-        border: 2vw solid black;
-        font-size: 2.5vw;
-        border-radius: 5vw;
-        text-align: center;
-    }
-    .request input{
-        width: 80%;
-        height: 80%;
-        border: 2vw solid black;
-        font-size: 2vw;
-        border-radius: 2vw; 
-        text-align: center;
-    }
-    .request textarea{
-        border: 2vw solid black;
-        border-radius: 2vw;
-    }
-    .sendRequest{
-        width: 80%;
-        height: 80%;
-    }
-    .sendRequest:hover{
-        width: 35%;
-        height: 100%;
-    }
+
+.game{
+    text-align: center;
+    margin: auto;
+    vertical-align: bottom;
 }
-@media (max-width: 1400px){
-    body{
-        background-image: url("images/website-images/AltBackground.svg");
-        text-align: center;
+.game button{
+    height: 5vw;
+    font-size: 2vw;
+}
+
+.homebutton{
+    font-size: 2.75vw;
+    width: 19.2vw;
+    height: 5vw;
+    margin-top: 1.2vw;
+    margin-bottom: 1.2vw;
+    transition: all 0.1s;
+}
+
+p{
+    font-family: MatrixFont;
+    font-size: 1.2vw;
+}
+
+a{
+    color:#00ff00;
+}
+.topbar{
+    vertical-align: top;
+    position: fixed;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    margin-bottom: 5vw;
+}
+.sidebar{
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: middle;
+    text-align: left;
+    width: 10%;
+    position: fixed;
+}
+
+@media(max-width: 800px) 
+{
+    .password{
+        width: 100%;
+    }    
+    .container{
+        width: 100%;
     }
-    .banner{
-        width: 80%;
-        height: 80%;
+    h1{
+        font-size: 10vw;
     }
-    .site {
-        width: 20%;
-        height: 20%;
-        margin: 10vw 0;
+    h2{
+        font-size: 3.5vw;
+        margin-top: 0.5vw;
+        margin-bottom: 0.5vw;
     }
-    
-    .site:hover {
-        width: 25%;
-        height: 25%;
+    input{
+        width: 35vw;
+        height: 4vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        font-size: 3vw;
     }
-    .request{
-        width: 80%;
-        height: 80%;
-        border: 150% solid black;
+    button{
+        font-size: 4vw;
+        width: 40vw;
+        height: 8vw;
+        margin-top: 1.2vw;
+        margin-bottom: 1.2vw;
     }
-    .request input{
-        width: 80%;
-        height: 80%;
-        border: 150% solid black;
-    }
-    .sendRequest{
-        width: 80%;
-        height: 80%;
-    }
-    .sendRequest:hover{
-        width: 35%;
-        height: 100%;
+    .homebutton{
+        font-size: 5vw;
+        width: 20vw;
+        height: 8vw;
+        margin-top: 1.2vw;
+        margin-bottom: 1.2vw;
     }
 }

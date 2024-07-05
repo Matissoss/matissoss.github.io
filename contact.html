@@ -5,56 +5,30 @@
         <meta charset="UTF-8">
         <meta name="description" content="Matissoss GameDev official page">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel = "icon" type="image/x-icon" href="images/promo-images/Favicon.svg">
+        <link rel = "icon" type="image/x-icon" href="images/Logo.png">
+        <script src = "scripts/main.js"></script>
     </head>
     <body>
-        <h1>
-            Contact
-        </h1>
-        <a class="link" href="index.html">
-            Home
-        </a>
-        <a class="link" href="games.html">
-            Games
-        </a>
-        <a class="link" href="sites.html">
-            Sites
-        </a>
-        <a class="link" href="contact.html">
-            Contact
-        </a>
-        <h2>
-            Have any questions? Then answer them here and i'll try to reply as fast as possible.
-            <br><br>
-            <a href = "mailto:matissossGameDev@proton.me"><img src="images/website-images/Mailme.svg" class="mail"></a>
-            <br>
-            <a href="https://twitter.com/messages/compose?recipient_id=1774099156438532096" target="_blank"><img src="images/website-images/SendDM.svg" class="mail"></a>
-        </h2>
-        
-        <h2 style="font-size: 3vw;">Request CarmEco Closed Beta</h2>
-        <div class="request" style="text-align: center;">
-            <h2>Request Form</h2>
-        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mldrervz" method="post">
-            <fieldset id="fs-frm-inputs" style="border: none;">
-                <br>
-              <label for="full-name">Your Name/Nickname</label>
-              <br>
-              <input type="text" name="name" id="full-name" placeholder="Your Nickname/Name" required="">
-              <br>
-              <label for="email-address">Your Email</label>
-              <br>
-              <input type="email" name="_replyto" id="email-address" placeholder="enter@your-email.here" required="">
-              <br>
-              <label for="message">Your Message</label>
-              <br>
-              <textarea rows="5" name="message" id="message" placeholder="Enter your message here!" required="" style="font-family: DMSans;"></textarea>
-              <br>
-              <input type="hidden" name="_subject" id="email-subject" value="CarmEco Closed Beta Request">
-              <br>
-            </fieldset>
-            <input type="submit" value="Send Request" class="sendRequest">
-            <br>
-          </form>
+        <div class="container">
+            <div class = "topbar">
+                <button class="homebutton" onclick="home()">HOME</button>
+                <button class="homebutton" onclick="games()">GAMES</button>
+                <button class="homebutton" onclick="sites()">SITES</button>
+                <button class="homebutton" onclick="contact()">CONTACT</button>
+                <button class="homebutton" onclick="credits()">CREDITS</button>
+            </div>
+            <div class = "centerdiv">
+                <h1>CONTACT</h1>
+                <h2>
+                    CONTACT LIST <br>
+                    MAIL <br>
+                    TWITTER OR X
+                </h2>
+                <input placeholder="SELECT CONTACT MODE" id = "contactMode"> <br>
+                <h2 id = "error"></h2>
+                <button onclick = "checkContact()">SEND MESSAGE</button>
+            </div>
         </div>
+        <script src = "scripts/contact.js"></script>
     </body>
 </html>

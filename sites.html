@@ -5,44 +5,34 @@
         <meta charset="UTF-8">
         <meta name="description" content="Matissoss GameDev official page">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel = "icon" type="image/x-icon" href="images/promo-images/Favicon.svg">
+        <link rel = "icon" type="image/x-icon" href="images/Logo.png">
+        <script src = "scripts/main.js"></script>
     </head>
     <body>
-        <h1>
-            Sites
-        </h1>
-        <a class="link" href="index.html">
-            Home
-        </a>
-        <a class="link" href="games.html">
-            Games
-        </a>
-        <a class="link" href="sites.html">
-            Sites
-        </a>
-        <a class="link" href="contact.html">
-            Contact
-        </a>
-        <br><br><br>
-        <a target="_blank" href="https://github.com/Matissoss">
-            <img src = "images/socialmedialogos/Github.svg" alt="My Github" class="site">
-        </a>
-        <a target="_blank" href="https://matissoss.itch.io">
-            <img src="images/socialmedialogos/ITchio.svg" alt="My Itch.io" class="site">
-        </a>
-        <a target="_blank" href="https://soundcloud.com/matissossgamedev">
-            <img src="images/socialmedialogos/Soundcloud.svg" alt="My Soundcloud" class="site">
-        </a>
-        <br>
-        <a  target="_blank" href="https://www.youtube.com/@MatissossGameDev">
-            <img src="images/socialmedialogos/Youtube.svg" alt="My Youtube Channel" class="site">
-        </a>
-        <a target="_blank" href="https://x.com/matissosgamedev">
-            <img src="images/socialmedialogos/X.svg" alt="My Twitter/X" class="site">
-        </a>
-        <br>
-        <p>
-        The attached logos have been altered from their original versions. Please note that I do NOT claim ownership of the original designs.
-        </p>
+        <div class="container">
+            <div class = "topbar">
+                <button class="homebutton" onclick="home()">HOME</button>
+                <button class="homebutton" onclick="games()">GAMES</button>
+                <button class="homebutton" onclick="sites()">SITES</button>
+                <button class="homebutton" onclick="contact()">CONTACT</button>
+                <button class="homebutton" onclick="credits()">CREDITS</button>
+            </div>
+            <div class = "centerdiv">
+                <h1>SITES</h1>
+                <h2>
+                    SITE LIST <br>
+                    ITCHIO <br>
+                    GITHUB <br>
+                    TWITTER OR X <br>
+                    YOUTUBE <br>
+                    SOUNDCLOUD 
+                </h2>
+                <input placeholder="INPUT SITE" id = "siteSelector">
+                <p id = "error"></p>
+                <br>
+                <button onclick="checkSite()">OPEN SITE</button>
+            </div>
+        </div>
+        <script src = "scripts/sites.js"></script>
     </body>
 </html>
