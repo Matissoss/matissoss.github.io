@@ -8,39 +8,7 @@
         <link rel = "icon" type="image/x-icon" href="images/Logo.png">
         <script src = "scripts/main.js"></script>
         <style>
-        @keyframes textTyping {
-        from{
-            text-transform: lowercase;
-            white-space: nowrap;
-            margin: 0 auto;
-            width: 0%;
-            overflow: hidden;
-        }
-        to{
-            text-transform: uppercase;
-            white-space: nowrap;
-            text-align: center;
-            width: 100%;
-            margin: 0 auto; 
-        }
-    }
-    @keyframes textHidder {
-        from{color:#00ff00}
-        to{content: "DECOMPILED";}
-    }
-    @keyframes myAvatar {
 
-        from{
-            width: 180px;
-            height: 180px;
-            content: url("images/Black.png");
-        }
-        to{
-            width: 180px;
-            height: 180px;
-            content: url("images/Image.svg");
-        }
-    }
         </style>
     </head>
     <body>
@@ -53,17 +21,9 @@
                 <button class="homebutton" onclick="credits()">CREDITS</button>
             </div>
             <div class = "centerdiv">
-                <h1 style = "font-size: 3vw;">INFORMATIONS ABOUT MATISSOSS_GAMEDEV</h1>
+                <h1 style = "font-size: 3vw;">INFORMATIONS ABOUT <br> MATISSOSS_GAMEDEV</h1>
                 <button onclick = "about()" id = "aboutButton" style ="height: 4vw; font-size: 1.5vw;">PROCEED</button>
-                <div id = "password" class = "invisible">
-                    <h2>ENTER PASSWORD</h2>
-                    <input placeholder="ENTER PASSWORD HERE" id = "passwordEnter">
-                    <h2 id = "error"></h2>
-                    <br>
-                    <button onclick="checkPassword()" style ="height: 4vw; font-size: 1.5vw; margin-top: 0.25vw;" class="homebutton">GET ACCESS</button>
-                </div>
                 <div class = "invisible" id = "aboutMe">
-                    <h2 style = "animation: textHidder 5s steps(1, end); animation-fill-mode: forwards;">DECOMPILING</h2>
                     <h2 style = "animation: textTyping 3s steps(600, end); animation-fill-mode: forwards;">TARGET_IMAGE</h2>
                     <img src="none" style = "border: 0.25vw solid #00ff00; animation: myAvatar 5.5s; animation-fill-mode: forwards;">
                     <h2 style = "animation: textTyping 4s steps(600, end); animation-fill-mode: forwards;">TARGET_STATUS LOCALIZED</h2>
@@ -77,6 +37,5 @@
                 </div>
             </div>
         </div>
-        <script src = "scripts/home.js"></script>
     </body>
 </html>

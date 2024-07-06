@@ -3,6 +3,37 @@
     src: url(fonts/MatrixFont.ttf);
 }
 
+@keyframes textTyping {
+    from{
+        text-transform: lowercase;
+        white-space: nowrap;
+        margin: 0 auto;
+        width: 0%;
+        overflow: hidden;
+    }
+    to{
+        text-transform: uppercase;
+        white-space: nowrap;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto; 
+    }
+}
+@keyframes myAvatar {
+
+    from{
+        width: 180px;
+        height: 180px;
+        content: url("images/Black.png");
+    }
+    to{
+        width: 180px;
+        height: 180px;
+        content: url("images/Image.svg");
+    }
+}
+
+
 body{
     background-color: black;
     text-align: center;
@@ -24,11 +55,6 @@ body{
     display: none;
 }
 
-p{
-    color:#00ff00;
-    font-size: 0.35vw;
-}
-
 h1{
     color: #00ff00;
     margin-top: 1.25vw;
@@ -37,6 +63,8 @@ h1{
     margin-bottom: 0.25vw;
     font-size: 8vw;
     font-family: MatrixFont;
+    animation: textTyping 1s steps(12000, end);
+    animation-fill-mode: forwards;
 }
 h2{
     color: #00ff00;
@@ -107,6 +135,10 @@ button:hover{
 p{
     font-family: MatrixFont;
     font-size: 1.2vw;
+    color:#00ff00;
+    text-transform: uppercase;
+    animation: textTyping 3s steps(1200, end);
+    animation-fill-mode: forwards;
 }
 
 .header{

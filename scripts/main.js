@@ -14,6 +14,6 @@ function credits(){
     window.location.replace("credits.html");
 }
 function about(){
-    document.getElementById("password").className = "";
+    document.getElementById("aboutMe").className = "";
     document.getElementById("aboutButton").className = "invisible";
 }
