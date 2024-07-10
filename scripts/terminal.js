@@ -104,7 +104,6 @@ function executeCommand(){
         dmOnX();
     }
     else{
-        alert(inputValue);
         output.innerHTML = "error - unknown command <br> write help to see commands";
     }
     document.getElementById("outputs").appendChild(output);
