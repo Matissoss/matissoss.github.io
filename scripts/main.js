@@ -1,22 +1,12 @@
 function home(){
-    window.location.replace("home.html");
+    window.location.replace("index.html");
 }
 function games(){
-    window.location.replace("games.html");
-}
-function sites(){
-    window.location.replace("sites.html");
-}
-function contact(){
-    window.location.replace("contact.html");
+    window.location.replace("https://matissoss.itch.io");
 }
 function credits(){
     window.location.replace("credits.html");
 }
 function terminal(){
     window.location.replace("terminal.html");
-}
-function about(){
-    document.getElementById("aboutMe").className = "";
-    document.getElementById("aboutButton").className = "invisible";
 }

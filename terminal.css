@@ -1,13 +1,12 @@
 @font-face {
     font-family: MatrixFont;
-    src:url(fonts/JetBrainsMonoNL-Medium.ttf);
+    src:url(fonts/UbuntuMono-Regular.ttf);
 }
 
 body{
     background-color: black;
     font-family: MatrixFont;
     color: #00ff00;
-    text-transform: uppercase;
     text-align: center;
     align-items: center;
 }
@@ -16,7 +15,6 @@ h1{
 }
 h2{
     color: #00ff00;
-    text-transform: uppercase;
     text-align: left;
     margin-left: 4vw;
     font-family: MatrixFont;
@@ -24,7 +22,6 @@ h2{
 }
 #previous{
     color: #00ff00;
-    text-transform: uppercase;
     text-align: left;
     margin-left: 4vw;
     font-family: MatrixFont;
@@ -32,7 +29,6 @@ h2{
 }
 #output{
     color: #00ff00;
-    text-transform: uppercase;
     text-align: left;
     margin-left: 5vw;
     font-family: MatrixFont;
@@ -40,7 +36,6 @@ h2{
 }
 #input{
     color: #00ff00;
-    text-transform: uppercase;
     text-align: left;
     margin-left: 4vw;
     font-family: MatrixFont;

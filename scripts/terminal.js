@@ -39,7 +39,7 @@ function executeCommand(){
     }
     else if(inputValue === "Matissoss.github.io/Terminal&gt;return"){
         output.innerHTML = "Returning to normal view";
-        window.location.replace("home.html");
+        window.location.replace("index.html");
     }
     else if(inputValue === "Matissoss.github.io/Terminal&gt;clear"){
         output.innerHTML = "Cleared";

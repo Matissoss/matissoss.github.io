@@ -6,26 +6,46 @@
         <meta name="description" content="Matissoss GameDev official page">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "icon" type="image/x-icon" href="images/Logo.png">
+        <script src = "scripts/main.js"></script>
+        <script src = "scripts/style.js"></script>
+        <script src = "scripts/sites.js"></script>
+        <title>Matissosss GameDev Official Website</title>
     </head>
     <body>
-        <div class="container">
-            <div class="centerdiv" id="password">
-                <h1 class="header">MSYSTEM</h1>
-                <br>
-                <h2 style = "font-size: 1.75vw;">ENTER YOUR PASSWORD</h2>
-                <br>
-                <input placeholder="ENTER PASSWORD HERE" id = "passwordEnter">
-                <br>
-                <h2 id = "passwordReminder" style = "font-size: 1.25vw;"></h2>
-                <button onclick = "checkPassword()"> LOG IN </button>
-                <button onclick = "password()">PASSWORD REMINDER</button>
+        <header>
+            <button class="homebutton" onclick="home()">Home</button>
+            <button class="homebutton" onclick="games()">Games</button>
+            <button class="homebutton" onclick="credits()">Credits</button>
+            <button class="homebutton" onclick="terminal()">Teminal Mode</button>
+         </header>
+         <h1>About Matissoss GameDev</h1>
+         <div style = "background-color: var(--background-main); display: flex; flex-direction: row; margin-left: auto; margin-right: auto; text-align: center; align-items: center;">
+            <div style = "margin-left: auto; margin-right: auto; width: 40%; height: 60vh;">
+                <h1>About me:</h1>
+                <h2>My name is Matissoss GameDev</h2>
             </div>
-            <div class="invisible" id="proceed">
-                <h1>PROCEED</h1>
-                <button onclick="clickedYes()">YES</button>
-                <button onclick="clickedNo()">NO</button>
+            <div style="margin-left: auto; margin-right: auto; width: 40%; height: 60vh;">
+                <h1>
+                    Projects planned:
+                </h1>
+                <h2 style="text-align: left; margin-left: 1vw; margin-top: auto; margin-bottom: auto; display: flex; flex-direction: column;">
+                    - Shadow Woods Mystery <br> 
+                    - Unannounced
+                </h2>
             </div>
-        </div>
-        <script src = "scripts/password.js"></script>
+         </div>
+         <footer style = "display: flex; flex-direction: row; margin-left: auto; margin-right: auto; background-color: var(--background-alt); margin-top: 2vw; padding: 1vw;">
+            <h2 style="margin-top: auto; margin-bottom: auto;">Site made by Matissoss GameDev</h2>
+            <h2 style="margin-top: auto; margin-bottom: auto;">Contact: matissossGameDev@proton.me</h2>
+            <button onclick="Green();">Mint</button>
+            <button onclick="Blue()">Ice</button>
+            <button onclick="Red()">Rose</button>
+            <img src = "images/sites/XGreen.svg" id = "twitter" onclick="twitter()">
+            <img src = "images/sites/ItchGreen.svg" id = "itch" onclick="itchio()">
+            <img src = "images/sites/GithubGreen.svg" id = "github" onclick="github()">
+            <img src = "images/sites/YoutubeGreen.svg" id = "youtube" onclick="youtube()">
+            <img src = "images/sites/SoundcloudGreen.svg" id = "soundcloud" onclick="soundcloud()">
+         </footer>
+
     </body>
 </html>

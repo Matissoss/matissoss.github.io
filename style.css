@@ -1,41 +1,38 @@
+
 @font-face {
-    font-family: MatrixFont;
-    src: url(fonts/MatrixFont.ttf);
+    font-family: Ubuntu Regular;
+    src: url("fonts/Ubuntu-Regular.ttf");
+}
+@font-face {
+    font-family: Ubuntu Light;
+    src: url("fonts/Ubuntu-Light.ttf");
+}
+@font-face {
+    font-family: Ubuntu Bold;
+    src: url("fonts/Ubuntu-Bold.ttf");
+}
+@font-face {
+    font-family: Ubuntu Medium Italic;
+    src: url("fonts/Ubuntu-MediumItalic.ttf");
+}
+@font-face {
+    font-family: Ubuntu Light Italic;
+    src: url("fonts/Ubuntu-LightItalic.ttf");
+}
+@font-face {
+    font-family: Ubuntu Bold Italic;
+    src: url("fonts/Ubuntu-BoldItalic.ttf");
 }
 
-@keyframes textTyping {
-    from{
-        text-transform: lowercase;
-        white-space: nowrap;
-        margin: 0 auto;
-        width: 0%;
-        overflow: hidden;
-    }
-    to{
-        text-transform: uppercase;
-        white-space: nowrap;
-        text-align: center;
-        width: 100%;
-        margin: 0 auto; 
-    }
+:root{
+    --background-main: #e2ffe2;
+    --background-alt: #c3fcc8;
+    --text-main: #8ebf8f;
+    --text-alt: #88bc88;
 }
-@keyframes myAvatar {
-
-    from{
-        width: 180px;
-        height: 180px;
-        content: url("images/Black.png");
-    }
-    to{
-        width: 180px;
-        height: 180px;
-        content: url("images/Image.svg");
-    }
-}
-
 
 body{
-    background-color: black;
+    background-color: var(--background-main);
     text-align: center;
 }
 
@@ -56,63 +53,78 @@ body{
 }
 
 h1{
-    color: #00ff00;
+    color: var(--text-main);
     margin-top: 1.25vw;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0.25vw;
-    font-size: 8vw;
-    font-family: MatrixFont;
-    animation: textTyping 1s steps(12000, end);
+    font-size: 2vw;
+    font-family: Ubuntu Light;
+    font-weight: 100;
     animation-fill-mode: forwards;
 }
+
+div{
+    background-color: var(--background-alt);
+}
+
 h2{
-    color: #00ff00;
+    color: var(--text-main);
     margin-top: 0.125vw;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0.25vw;
     font-size: 1.5vw;
-    font-family: MatrixFont;
-}
-input{
-    background-color: black;
-    padding: 0.5vw;
-    height: 2.5vw;
-    margin-top: 0.5vw;
-    margin-bottom: 0.5vw;
-    width: 22.5vw;
-    color: #00ff00;
-    font-family: MatrixFont;
-    border: #00ff00 solid 0.25vw;
-    font-size: 1.25vw;
-    text-align: center;
+    font-weight: 400;
+    font-family: Ubuntu Regular;
 }
 
 button{
     margin-top: 1vw;
-    background-color: black;
-    color: #00ff00;
+    background-color: var(--background-main);
+    color: var(--text-main);
     padding: 1vw;
-    font-family: MatrixFont;
-    font-size: 1.75vw;
+    font-family: Ubuntu Light;
+    font-weight: 100;
+    font-size: 1vw;
     border: none;
     transition: 0.1s;
     text-align: center;
-    width: 19.2vw;
-    height: 7vw;
-    margin-left: auto;
-    margin-right: auto;
-}
-td{
-    margin-left: 1vw;
-    padding: 2vw;
+    width: 15vw;
+    height: 3vw;
+    margin: auto;
+    transition: all 0.1s;
 }
 button:hover{
-    background-color: #00ff00;
-    color: black;
+    background-color: var(--background-alt);
+    color: var(--text-main);
 }
 
+footer{
+    position: fixed;
+    width: 98vw;
+}
+footer button{
+    width: 5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+footer h2{
+    font-size: 1vw;
+    font-family: Ubuntu;
+    font-weight: 300;
+}
+footer img{
+    width: 3vw;
+    height: 3vw;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.1s;
+}
+footer img:hover{
+    width: 3.25vw;
+    height: 3.25vw;
+}
 .game{
     text-align: center;
     margin: auto;
@@ -133,20 +145,18 @@ button:hover{
 }
 
 p{
-    font-family: MatrixFont;
+    font-family: Ubuntu 'Regular';
     font-size: 1.2vw;
-    color:#00ff00;
+    color: var(--text-main);
     text-transform: uppercase;
     animation: textTyping 3s steps(1200, end);
     animation-fill-mode: forwards;
 }
 
-.header{
-    font-size: 10.5vw;
-}
+
 
 a{
-    color:#00ff00;
+    color:var(--text-main);
 }
 .topbar{
     vertical-align: top;
@@ -166,39 +176,54 @@ a{
 }
 
 @media(max-width: 800px) 
-{
-    .password{
-        width: 100%;
-    }    
-    .container{
-        width: 100%;
-    }
+{   
     h1{
-        font-size: 10vw;
+        font-size: 4vw;
     }
     h2{
-        font-size: 3.5vw;
+        font-size: 2.5vw;
         margin-top: 0.5vw;
         margin-bottom: 0.5vw;
     }
-    input{
-        width: 35vw;
-        height: 4vw;
-        padding-top: 2vw;
-        padding-bottom: 2vw;
-        font-size: 3vw;
-    }
     button{
-        font-size: 4vw;
-        width: 40vw;
+        font-size: 2vw;
+        width: 50vw;
         height: 8vw;
         margin-top: 1.2vw;
         margin-bottom: 1.2vw;
     }
-    .homebutton{
-        font-size: 5vw;
-        width: 20vw;
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        position:unset;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 1vw;
+    }
+    footer img{
+        width: 7vw;
+        height: 7vw;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    footer h2{
+        font-size: 2.5vw;
+    }
+    footer button{
+        width: 15vw;
+    }
+    footer img:hover{
+        width: 8vw;
         height: 8vw;
+    }
+    .homebutton{
+        font-size: 4vw;
+        width: 99vw;
+        height: 10vw;
         margin-top: 1.2vw;
         margin-bottom: 1.2vw;
     }
