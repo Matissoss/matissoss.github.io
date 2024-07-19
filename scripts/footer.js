@@ -1,4 +1,4 @@
-function itchio(){
+function itch(){
     window.open("https://matissoss.itch.io");
 }
 function github(){

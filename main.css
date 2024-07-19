@@ -1,0 +1,203 @@
+@font-face {
+    font-family: Ubuntu 'Regular';
+    src: url(fonts/Ubuntu-Regular.ttf);
+}
+@font-face {
+    font-family: Ubuntu 'Light';
+    src: url(fonts/Ubuntu-Light.ttf);
+}
+
+:root{
+    --background-main: #726759; 
+    --text-main: #E3D6C3; 
+}
+
+body{
+    color: var(--text-main);
+    background-color: var(--background-main);
+    font-family: Ubuntu;
+    text-align: center;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--text-main);
+    padding: 0.5vw;
+}
+header button{
+    margin: auto;
+    width: 15vw;
+}
+h1{
+    font-family: Ubuntu;
+    font-weight: 100;
+}
+h2{
+    font-weight: 200;
+}
+p{
+    font-size: large;
+}
+.container{
+    background-color: var(--text-main);
+    color: var(--background-main);
+    margin: auto;
+    margin-top: 4vh;
+    width: 45%;
+    text-align: center;
+    height: 50vh;
+}
+.container img{
+    border-radius: 1vw;
+    width: 18vw;
+    height: 12vw;
+}
+.container button{
+    width: 25%;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+button{
+    color: var(--background-main);
+    background-color: var(--text-main);
+    border: none;
+    font-family: Ubuntu;
+    font-size: 175%;
+    padding: 1vw;
+    transition: all 0.2s;
+}
+button:hover{
+    color: var(--text-main);
+    background-color: var(--background-main);
+}
+footer{
+    background-color: var(--text-main);
+    color:var(--background-main);
+    margin-top: 2vh;
+    padding-bottom: 1vh;
+    height: 15vh;
+    align-self: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 93vw;
+    display: flex;
+    flex-direction: row;
+    padding-top: 2vh;
+}
+footer h1, footer h2,footer p,footer img{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+footer h2{
+    margin-left: auto;
+}
+footer img{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 4vw;
+    height: 4vw;
+    transition: all 0.2s;
+}
+footer img:hover{
+    width: 5vw;
+    margin-left: auto - 0.5vw;
+    margin-right: auto - 0.5vw;
+    height: 5vw;
+}
+li{
+    font-size: larger;
+    text-align: left;
+    margin-left: 2vw;
+}
+a{
+    text-decoration: underline;
+    color: var(--background-main);
+    font-family: Ubuntu;
+    font-size: large;
+}
+.screenshot{
+    width: 25vw;
+    height: 20vw;
+    background-color: var(--text-main);
+    color: var(--background-main);
+    font-family: Ubuntu;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.screenshot img{
+    margin: auto;
+    border-radius: 1vw;
+    width: 18vw;
+    height: 12vw;
+}
+#containerAlt{
+    width: 42.5%;
+}
+
+@media (max-width: 800px) {
+    header{
+        flex-direction: column;
+    }
+    header button{
+        width: 50%;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .row .container{
+        width: 93vw;
+    }
+    .row .container h1{
+        font-size: 125%;
+    }
+    .row .container li{
+        font-size: 4vw;
+    }
+    .row .container img{
+        width: 50vw;
+        height: 40vw;
+    }
+    #containerAlt{
+        width: 93vw;
+    }
+    footer{
+        font-size: 0.2vw;
+        background-color: var(--text-main);
+        margin-bottom: auto;
+    }
+    footer img{
+        width: 7vw;
+        height: 7vw;
+        padding: 1vw;
+        background-color: var(--text-main);
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+    footer img:hover{
+        width: 7.5vw;
+        height: 7.5vw;
+        padding: 0.5vw;
+    }
+    .screenshot{
+        width: 93vw;
+        margin-top: 5vh;
+        height: 40vw;
+        padding-bottom: 1vw;
+    }
+    .screenshot img{
+        width: 40vw;
+        height: 25vw;
+    }
+    #contact{
+        width: 75vw;
+    }
+}

@@ -4,7 +4,8 @@
         <link rel = "stylesheet" href = "main.css">
         <script src = "scripts/topbar.js"></script>
         <script src = "scripts/footer.js"></script>
-        <title>MatissossGameDev Credits</title>
+        <script src = "scripts/contact.js"></script>
+        <title>MatissossGameDev Contact</title>
     </head>
     <body>
         <header>
@@ -15,29 +16,22 @@
             <button onclick="contact()">Contact</button>
         </header>
         <h1>
-            Credits Page
+            Contact Page
         </h1>
         <p>
-            Font used, Website coder, etc.
+            Contact options
         </p>
         <div>
             <div class = "row">
                 <div class = "container">
-                    <h1>Credits</h1>
-                        <li>
-                            Website coder: Matissos GameDev
-                        </li>
-                        <li>
-                            Font: Ubuntu Font
-                        </li>
-                        <li>
-                            Social Media / Sites Logos were modified for better look 
-                        </li>
-
+                    <h1>Contact</h1>
+                    <button onclick="mail()" id = "contact">Send e-mail</button>
+                    <br>
+                    <button onclick="twitterMsg()" id = "contact">Send message on Twitter</button>
                 </div>
             </div>
         </div>
-        <footer style = "margin-top: 4vh; padding-top: 3vh; padding-bottom: 3vh;">
+        <footer style = "margin-top: 4vh; padding-top: 3vh; padding-bottom: 3vh;">  
             <img src = "images/sites/Avatars/Github.svg" onclick="github()">
             <img src = "images/sites/Avatars/Itch.svg" onclick="itch()">
             <img src = "images/sites/Avatars/Twitter.svg" onclick="twitter()">
