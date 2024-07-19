@@ -5,7 +5,7 @@ function games(){
     window.location.replace("games.html");
 }
 function latestGame(){
-    window.location.replace("latestGame.html");
+    window.location.replace("latestgame.html");
 }
 function contact(){
     window.location.replace("contact.html");
