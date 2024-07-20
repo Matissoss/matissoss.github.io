@@ -142,8 +142,26 @@ a{
 #containerAlt{
     width: 42.5%;
 }
+#contact{
+    width: 40vw;
+    font-size: large;
+}
+#indexAbout{
+    font-size: large;
+}
+#game div{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
 
-@media (max-width: 800px) {
+@media (max-width: 1025px) 
+{
+    #containerAlt{
+        height: 80vh;
+    }
+}
+
+@media (max-width: 900px) {
     header{
         flex-direction: column;
     }
@@ -199,5 +217,38 @@ a{
     }
     #contact{
         width: 75vw;
+    }
+    #indexAbout{
+        font-size: medium;
+    }
+    #projects li{
+        font-size: medium;
+    }
+}
+@media (max-width: 500px){
+    #game img{
+        width: 40vw;
+        height: 25vw;
+    }
+    #game .row{
+        display: flex;
+        flex-direction: column;
+    }
+    #game div{
+        height: 75vh;
+    }
+    #containerAlt{
+        height: 120%;
+    }
+}
+@media (max-height: 500px) {
+    footer{
+        padding-bottom: 5vw;
+    }
+    .container{
+        height: 100vh;
+    }
+    #game div{
+        height: 120%;
     }
 }
