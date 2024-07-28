@@ -5,7 +5,7 @@ function github(){
     window.open("https://github.com/matissoss");
 }
 function twitter(){
-    window.open("https://x.com/@matissosgamedev");
+    window.open("https://x.com/@matissossgdev");
 }
 function youtube(){
     window.open("https://www.youtube.com/@MatissossGameDev");
