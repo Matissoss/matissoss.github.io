@@ -1,56 +1,65 @@
 <!DOCTYPE html>
 <html>
     <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "main.css"> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Official Matissoss GameDev Website">
 <meta name="keywords" content="Matissoss, Game Dev, Indie GameDev">
 <meta name="author" content="Matissoss GameDev">
-        <link rel = "stylesheet" href = "main.css">
-        <script src = "scripts/topbar.js"></script>
-        <script src = "scripts/footer.js"></script>
-        <title>MatissossGameDev Website</title>
+<title>MatDev Website</title>
+<link rel = "icon" href = "images/Logo.svg">
     </head>
     <body>
-        <header>
-            <button onclick="home()">Home</button>
-            <button onclick="games()">Games</button>
-            <button onclick="latestGame()">Latest Game</button>
-            <button onclick="credits()">Credits</button>
-            <button onclick="contact()">Contact</button>
-        </header>
-        <h1>
-            Home Page
-        </h1>
-        <p>
-            About me, projects im working on, etc.
-        </p>
-        <div>
-            <div class = "row">
-                <div class = "container">
-                    <h1>About me</h1>
-                    <p id = "indexAbout">
-                        My name is Matissoss GameDev. 
-                        <br>Im young game developer from Poland. 
-                        <br>Im using Unity and C#.
-                        <br> Most of info i post on my Twitter/X
-                    </p>
-                </div>
-                <div class = "container" id = "projects">
-                    <h1>Projects im working on</h1>
+        <div class = "topbar">
+            <img src = "images/Logo.svg" alt="Logo">
+        </div>
+        <div class = "main">
+            <h1 class="title">MatDev</h1>
+            <h2>Polish Indie Game Dev</h2>
+            <div class = "sites">
+                <img src="images/Socials/Itch.svg"   onclick="itchio()"     alt = "ItchIo">
+                <img src="images/Socials/Git.svg"    onclick="github()"     alt = "github">
+                <img src="images/Socials/You.svg"    onclick="youtube()"    alt = "youtube">
+                <img src="images/Socials/Twitter.svg"onclick="twitter()"    alt = "twitter">
+                <img src="images/Socials/SCloud.svg" onclick="soundcloud()" alt = "soundcloud">
+            </div>
+            <br>
+            <div class = "games">
+                <h2>Games</h2>
+                <h3 id = "GameTitle">Game Title</h3>
+               <img src="images/Games/1.svg" id = "GameIMG">
+               <button onclick="nextGame()">Other Game</button>
+               <button id = "GameButton" onclick="window.open('https://matissoss.itch.io')">Play</button>
+            </div>
+            <div class="LatestVideo">
+                <h2>Latest Youtube Video</h2>
+                <iframe src = "https://www.youtube.com/embed/qaAZDDexzds"></iframe>
+            </div>
+            <div class="LatestVideo">
+                <h2>Twitter</h2>
+                <a class="twitter-timeline" data-lang="en" data-theme="dark" href="https://twitter.com/MatissossGDev?ref_src=twsrc%5Etfw">Tweets by MatissossGDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            <div class="projects">
+                <h2>Working on:</h2>
+                <div class="collumn">
                     <li>
-                        Shadow Woods Park Mystery
+                        Learning Rust (i hate myself or im masochist idk)
+                    </li>
+                    <li>
+                        Game Jams with Unity and C#  
+                    </li>
+                    <li>
+                        Trying to make youtube videos
                     </li>
                 </div>
             </div>
         </div>
-        <footer>
-            <img src = "images/sites/Avatars/Github.svg" onclick="github()">
-            <img src = "images/sites/Avatars/Itch.svg" onclick="itch()">
-            <img src = "images/sites/Avatars/Twitter.svg" onclick="twitter()">
-            <img src = "images/sites/Avatars/Youtube.svg" onclick="youtube()">
-            <img src = "images/sites/Avatars/Soundcloud.svg" onclick="soundcloud()">
-            <br>
-        </footer>
+        <div class = "footer">
+            <h2>Coder: MatDev </h2>
+            <h2>Fonts used: Ubuntu and CakeCafe</h2>
+        </div>
     </body>
+    <script src = "scripts/games.js"></script>
+    <script src = "scripts/sites.js"></script>
 </html>

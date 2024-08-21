@@ -1,254 +1,185 @@
 @font-face {
-    font-family: Ubuntu;
-    src: url(fonts/Ubuntu-Regular.ttf);
+    font-family: Main;
+    src: url(fonts/Ubuntu/Ubuntu-Regular.ttf);
 }
 @font-face {
-    font-family: Ubuntu-Light;
-    src: url(fonts/Ubuntu-Light.ttf);
+    font-family: Light;
+    src: url(fonts/Ubuntu/Ubuntu-Light.ttf);
+}
+@font-face {
+    font-family: Bold;
+    src: url(fonts/Ubuntu/Ubuntu-Bold.ttf);
+}
+@font-face {
+    font-family: CakeCafe;
+    src: url(fonts/Cakecafe.ttf);
 }
 
 :root{
-    --background-main: #726759; 
-    --text-main: #E3D6C3; 
+    --main: #302E30;
+    --text-main: #C27E53;
+    --alt: #C27E53;
+    --text-alt: #302E30;
 }
 
 body{
+    background-color: var(--main);
+    font-family: Main;
     color: var(--text-main);
-    background-color: var(--background-main);
-    font-family: Ubuntu;
-    text-align: center;
-}
-header{
-    display: flex;
-    flex-direction: row;
-    background-color: var(--text-main);
-    padding: 0.5vw;
-}
-header button{
-    margin: auto;
-    width: 15vw;
-}
-h1{
-    font-family: Ubuntu-Light;
-    font-weight: 100;
-}
-h2{
-    font-weight: 200;
-}
-p{
-    font-size: large;
-}
-.container{
-    background-color: var(--text-main);
-    color: var(--background-main);
-    margin: auto;
-    margin-top: 4vh;
-    width: 45%;
-    text-align: center;
-    height: 50vh;
-}
-.container img{
-    border-radius: 1vw;
-    width: 18vw;
-    height: 12vw;
-}
-.container button{
-    width: 25%;
-}
-.row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: auto;
 }
 
-button{
-    color: var(--background-main);
-    background-color: var(--text-main);
-    border: none;
-    font-family: Ubuntu;
-    font-size: 175%;
-    padding: 1vw;
-    transition: all 0.2s;
-}
-button:hover{
-    color: var(--text-main);
-    background-color: var(--background-main);
-}
-footer{
-    background-color: var(--text-main);
-    color:var(--background-main);
-    margin-top: 2vh;
-    padding-bottom: 1vh;
-    height: 15vh;
-    align-self: center;
-    margin-right: auto;
+.topbar{
+    width: 97vw;
+    height: 5vw;
     margin-left: auto;
-    width: 93vw;
+    margin-right: auto;
+    background-color: var(--main);
     display: flex;
     flex-direction: row;
-    padding-top: 2vh;
 }
-footer h1, footer h2,footer p,footer img{
-    margin-top: auto;
-    margin-bottom: auto;
-}
-footer h2{
-    margin-left: auto;
-}
-footer img{
+.topbar img{
     margin-top: auto;
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 4vw;
-    height: 4vw;
-    transition: all 0.2s;
-}
-footer img:hover{
     width: 5vw;
-    margin-left: auto - 0.5vw;
-    margin-right: auto - 0.5vw;
     height: 5vw;
 }
-li{
-    font-size: larger;
-    text-align: left;
+.topbar button{
+    height: 3vw;
+    margin-top: auto;
     margin-left: 2vw;
+    margin-right: 2vw;
+    margin-bottom: auto;
+    width: 10%;
+    font-family: Main;
 }
-a{
-    text-decoration: underline;
-    color: var(--background-main);
-    font-family: Ubuntu;
-    font-size: large;
-}
-.screenshot{
-    width: 25vw;
-    height: 20vw;
-    background-color: var(--text-main);
-    color: var(--background-main);
-    font-family: Ubuntu;
+.main h1{
     text-align: center;
-    margin: auto;
+    font-size: 10vw;
+    font-family: Light;
+    font-weight: 100;
+}
+.main h2{
+    margin-top: 0;
+}
+.main .title{
+    margin-top: 10vw;
+    margin-bottom: 0;
+    font-weight: lighter;
+}
+.main .sites{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+}
+.main .sites img{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    width: 5vw;
+    position: static;
+    height: 5vw;
+    transition: all 0.5s;
+}
+.main .sites img:hover{
+    width: 5.5vw;
+    height: 5.5vw;
+    cursor: pointer;
+}
+.main h2{
+    text-align: center;
+    font-weight: bold;
+    font-family: Bold;
+    font-size: 2.5vw;
+}
+.main .title{
+    font-family: CakeCafe;
+}
+.games{
+    margin-top: 10vw;
     display: flex;
     flex-direction: column;
 }
-.screenshot img{
-    margin: auto;
+.games img{
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 1vw;
-    width: 18vw;
-    height: 12vw;
+    display: block;
+    width: 25vw;
 }
-#containerAlt{
-    width: 42.5%;
+.games h3{
+    text-align: center;
+    font-size: 2vw;
+    margin-bottom: 0;
+    font-family: Light ;
 }
-#contact{
-    width: 40vw;
-    font-size: large;
-}
-#indexAbout{
-    font-size: large;
-}
-#game div{
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+button{
+    margin-top: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    font-family: Main;
+    font-size: 2vw;
+    padding-left: 7vw;
+    border-radius: 2vw;
+    padding-right: 7vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    transition: 0.25s all;
+    border: 0.25vw solid var(--text-main);
+    color:var(--text-main);
+    background-color: var(--main);
 }
 
-@media (max-width: 1025px) 
-{
-    #containerAlt{
-        height: 80vh;
-    }
+button:hover{
+    color: var(--text-alt);
+    background-color: var(--alt);
 }
-
-@media (max-width: 900px) {
-    header{
-        flex-direction: column;
-    }
-    header button{
-        width: 50%;
-    }
-    .row{
-        flex-direction: column;
-    }
-    .row .container{
-        width: 93vw;
-    }
-    .row .container h1{
-        font-size: 125%;
-    }
-    .row .container li{
-        font-size: 4vw;
-    }
-    .row .container img{
-        width: 50vw;
-        height: 40vw;
-    }
-    #containerAlt{
-        width: 93vw;
-    }
-    footer{
-        font-size: 0.2vw;
-        background-color: var(--text-main);
-        margin-bottom: auto;
-    }
-    footer img{
-        width: 7vw;
-        height: 7vw;
-        padding: 1vw;
-        background-color: var(--text-main);
-        margin-bottom: auto;
-        margin-top: auto;
-    }
-    footer img:hover{
-        width: 7.5vw;
-        height: 7.5vw;
-        padding: 0.5vw;
-    }
-    .screenshot{
-        width: 93vw;
-        margin-top: 5vh;
-        height: 40vw;
-        padding-bottom: 1vw;
-    }
-    .screenshot img{
-        width: 40vw;
-        height: 25vw;
-    }
-    #contact{
-        width: 75vw;
-    }
-    #indexAbout{
-        font-size: medium;
-    }
-    #projects li{
-        font-size: medium;
-    }
+.footer{
+    background-color: var(--alt);
+    color: var(--text-alt);
+    text-align: center;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: row;
 }
-@media (max-width: 500px){
-    #game img{
-        width: 40vw;
-        height: 25vw;
-    }
-    #game .row{
-        display: flex;
-        flex-direction: column;
-    }
-    #game div{
-        height: 75vh;
-    }
-    #containerAlt{
-        height: 120%;
-    }
+.LatestVideo{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
 }
-@media (max-height: 500px) {
-    footer{
-        padding-bottom: 5vw;
-    }
-    .container{
-        height: 100vh;
-    }
-    #game div{
-        height: 120%;
-    }
+.LatestVideo iframe{
+    width: 65vw;
+    height: 35vw;
+    border: solid var(--alt) 0.5vw; 
+    border-radius: 0.5vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.LatestVideo .twitter-timeline{
+    width: 65vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer h2{
+    margin: auto;
+}
+.projects li{
+    margin-left: 35vw;
+    font-family: Light;
+    font-size: 1.5vw;
+}
+.collumn{
+    display: flex;
+    flex-direction: column;
 }
