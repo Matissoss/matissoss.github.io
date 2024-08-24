@@ -119,6 +119,7 @@ body{
 }
 button{
     margin-top: 2vw;
+    width: 30vw;
     margin-left: auto;
     margin-right: auto;
     border: none;
@@ -155,21 +156,63 @@ button:hover{
 .LatestVideo{
     margin-top: 2vw;
     margin-bottom: 2vw;
+    display: flex;
+    flex-direction: column;
 }
-.LatestVideo iframe{
-    width: 65vw;
-    height: 35vw;
-    border: solid var(--alt) 0.5vw; 
-    border-radius: 0.5vw;
-    margin-left: auto;
-    margin-right: auto;
+.LatestVideo button{
+    width: 35vw;
+}
+.LatestVideo button:hover{
+    cursor: pointer;
+}
+.LatestVideo #Twitter{
+    border: solid #1DA1F2;
+    transition: all 0.5s;
+    color: white;
     display: block;
 }
-.LatestVideo .twitter-timeline{
-    width: 65vw;
+.LatestVideo #Twitter:hover{
+    background-color: #1DA1F2;
+}
+
+.LatestVideo #ItchIo{
+    border: solid #fa5c5c;
+    transition: all 0.5s;
+    color: white;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+}
+.LatestVideo #ItchIo:hover{
+    background-color: #fa5c5c;
+}
+
+.LatestVideo #Soundcloud{
+    border: solid #ff5500;
+    transition: all 0.5s;
+    color: white;
+    display: block;
+}
+.LatestVideo #Soundcloud:hover{
+    background-color: #ff5500;
+}
+
+.LatestVideo #Github{
+    border: solid #6e5494;
+    transition: all 0.5s;   
+    color:  #fafafa;
+    display: block;
+}
+.LatestVideo #Github:hover{
+    background-color: #6e5494;
+}
+
+.LatestVideo #Youtube{
+    border: solid #FF0000;
+    transition: all 0.5s;
+    color: white;
+    display: block;
+}
+.LatestVideo #Youtube:hover{
+    background-color: #FF0000;
 }
 .footer h2{
     margin: auto;
