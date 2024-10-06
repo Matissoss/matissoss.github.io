@@ -1,228 +1,105 @@
-@font-face {
-    font-family: Main;
-    src: url(fonts/Ubuntu/Ubuntu-Regular.ttf);
+@font-face{
+	font-family: std-bold;
+	src: url("fonts/Lato-Bold.ttf");
 }
-@font-face {
-    font-family: Light;
-    src: url(fonts/Ubuntu/Ubuntu-Light.ttf);
+@font-face{
+	font-family: std-font;
+	src: url(fonts/Lato-Regular.ttf);
 }
-@font-face {
-    font-family: Bold;
-    src: url(fonts/Ubuntu/Ubuntu-Bold.ttf);
+@font-face{
+	font-family: std-decorative;
+	src: url(fonts/Cakecafe.ttf);
 }
-@font-face {
-    font-family: CakeCafe;
-    src: url(fonts/Cakecafe.ttf);
+
+.title{
+	font-family: std-decorative;
+	font-size: 5vw;
+	font-weight: 200;
+}
+.main h2{ margin-top: 0;    }
+.main h1{ margin-bottom: 0; }
+.main *{text-align: center;}
+.main div{
+	border: 0.75vw solid var(--std-foreground);
+	margin-top: 10vh;
+	margin-left: 0;
+	animation: glow 5s infinite;
+}
+.main .skills, .main .sites{
+	height: 35vh;
+	width: 40vw;
+	border-left: none;
+	border-top-right-radius: 1vw;
+	border-bottom-right-radius: 1vw;
+}
+.main .skills li{
+	text-align: left;
+	margin-left: 10vw;
+	font-size: 125%;
+	font-weight: 1000;
+	margin-top: none;
+}
+.main .footer{
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	padding-top: 1.5vh;
+}
+.main .website_info, .main .introduction, .main .credits{
+	border-right: none;
+	border-top-left-radius: 1vw;
+	border-bottom-left-radius: 1vw;
+	width: 40vw;
+	height: 35vh;
+	margin-left: auto;
+}
+.main * h3{
+	font-size: 275%;
+	text-align: left;
+	margin-left : 5vw;
+	font-weight: 100;
+	margin-bottom: 1vh;
+}
+.main * p, .main .skills li, .main .sites li, .main .credits li{
+	font-size: 125%;
+	text-align: left;
+	margin-left: 5vw;
+}
+
+a{
+	color: var(--red);
 }
 
 :root{
-    --main: #302E30;
-    --text-main: #C27E53;
-    --alt: #C27E53;
-    --text-alt: #302E30;
+	--red: #f7768e;
+	--blue: #7aa2f7;
+	--green: #9ece6a;
+	--magenta: #bb9af7;
+	--yellow: #e0af68;
+	--cyan: #7dcfff;
+	--white: #a9b1d6;
+	--black: #1d202f;
+	--std-background: #24283b;
+	--std-foreground: #c0caf5;
+}
+
+@keyframes glow{
+	0%{border-color: var(--border-color);}
+	16%{border-color: #f7768e;}
+	32%{ border-color: #9ece6a;}
+	48%{ border-color: #e0af68;}
+	64%{ border-color: #7aa2f7;}
+	80%{ border-color: #bb9af7;}
+	96%{border-color: var(--border-color)}
+	100%{border-color: var(--border-color)}
 }
 
 body{
-    background-color: var(--main);
-    font-family: Main;
-    color: var(--text-main);
-}
-
-.topbar{
-    width: 97vw;
-    height: 5vw;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--main);
-    display: flex;
-    flex-direction: row;
-}
-.topbar img{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
-    width: 5vw;
-    height: 5vw;
-}
-.topbar button{
-    height: 3vw;
-    margin-top: auto;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    margin-bottom: auto;
-    width: 10%;
-    font-family: Main;
-}
-.main h1{
-    text-align: center;
-    font-size: 10vw;
-    font-family: Light;
-    font-weight: 100;
-}
-.main h2{
-    margin-top: 0;
-}
-.main .title{
-    margin-top: 10vw;
-    margin-bottom: 0;
-    font-weight: lighter;
-}
-.main .sites{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    align-self: center;
-}
-.main .sites img{
-    margin-left: 1vw;
-    margin-right: 1vw;
-    width: 5vw;
-    position: static;
-    height: 5vw;
-    transition: all 0.5s;
-}
-.main .sites img:hover{
-    width: 5.5vw;
-    height: 5.5vw;
-    cursor: pointer;
-}
-.main h2{
-    text-align: center;
-    font-weight: bold;
-    font-family: Bold;
-    font-size: 2.5vw;
-}
-.main .title{
-    font-family: CakeCafe;
-}
-.games{
-    margin-top: 10vw;
-    display: flex;
-    flex-direction: column;
-}
-.games img{
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 1vw;
-    display: block;
-    width: 25vw;
-}
-.games h3{
-    text-align: center;
-    font-size: 2vw;
-    margin-bottom: 0;
-    font-family: Light ;
-}
-button{
-    margin-top: 2vw;
-    width: 30vw;
-    margin-left: auto;
-    margin-right: auto;
-    border: none;
-    font-family: Main;
-    font-size: 2vw;
-    padding-left: 7vw;
-    border-radius: 2vw;
-    padding-right: 7vw;
-    padding-top: 0.5vw;
-    padding-bottom: 0.5vw;
-    transition: 0.25s all;
-    border: 0.25vw solid var(--text-main);
-    color:var(--text-main);
-    background-color: var(--main);
-}
-
-button:hover{
-    color: var(--text-alt);
-    background-color: var(--alt);
-}
-.footer{
-    background-color: var(--alt);
-    color: var(--text-alt);
-    text-align: center;
-    width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 0.5vw;
-    padding-bottom: 0.5vw;
-    margin-top: 2vw;
-    display: flex;
-    flex-direction: row;
-}
-.LatestVideo{
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-    display: flex;
-    flex-direction: column;
-}
-.LatestVideo button{
-    width: 35vw;
-}
-.LatestVideo button:hover{
-    cursor: pointer;
-}
-.LatestVideo #Twitter{
-    border: solid #1DA1F2;
-    transition: all 0.5s;
-    color: white;
-    display: block;
-}
-.LatestVideo #Twitter:hover{
-    background-color: #1DA1F2;
-}
-
-.LatestVideo #ItchIo{
-    border: solid #fa5c5c;
-    transition: all 0.5s;
-    color: white;
-    display: block;
-}
-.LatestVideo #ItchIo:hover{
-    background-color: #fa5c5c;
-}
-
-.LatestVideo #Soundcloud{
-    border: solid #ff5500;
-    transition: all 0.5s;
-    color: white;
-    display: block;
-}
-.LatestVideo #Soundcloud:hover{
-    background-color: #ff5500;
-}
-
-.LatestVideo #Github{
-    border: solid #6e5494;
-    transition: all 0.5s;   
-    color:  #fafafa;
-    display: block;
-}
-.LatestVideo #Github:hover{
-    background-color: #6e5494;
-}
-
-.LatestVideo #Youtube{
-    border: solid #FF0000;
-    transition: all 0.5s;
-    color: white;
-    display: block;
-}
-.LatestVideo #Youtube:hover{
-    background-color: #FF0000;
-}
-.footer h2{
-    margin: auto;
-}
-.projects li{
-    margin-left: 35vw;
-    font-family: Light;
-    font-size: 1.5vw;
-}
-.collumn{
-    display: flex;
-    flex-direction: column;
+	color: var(--white);
+	font-family: std-font;
+	border-radius: 2vw;
+	padding: 0;
+	animation: glow 5s infinite;
+	border: 1.25vw var(--std-foreground) solid;
+	background-color: var(--std-background);
 }
