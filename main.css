@@ -13,7 +13,7 @@
 
 .title{
 	font-family: std-decorative;
-	font-size: 5vw;
+	font-size: 300%;
 	font-weight: 200;
 }
 .main h2{ margin-top: 0;    }
@@ -24,6 +24,7 @@
 	margin-top: 10vh;
 	margin-left: 0;
 	animation: glow 5s infinite;
+	background-color: var(--std-background)
 }
 .main .skills, .main .sites{
 	height: 35vh;
@@ -96,10 +97,31 @@ a{
 
 body{
 	color: var(--white);
-	font-family: std-font;
+	font-family: std-font;;
 	border-radius: 2vw;
 	padding: 0;
 	animation: glow 5s infinite;
 	border: 1.25vw var(--std-foreground) solid;
 	background-color: var(--std-background);
+}
+
+@media screen and (max-width : 500px){
+	body{
+		border: 4vw solid;
+	}
+	.main  div{
+		border: 3vw solid;
+	}
+	.main .website_info{
+		height: 75vh;
+	}
+	.main .website_info h3{
+		font-size: 225%;
+	}
+	.main .skills{
+		height: 60vh;
+	}
+	.main .introduction{
+		height: 60vh;
+	}
 }
