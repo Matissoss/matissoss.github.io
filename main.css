@@ -1,127 +1,224 @@
-@font-face{
-	font-family: std-bold;
-	src: url("fonts/Lato-Bold.ttf");
-}
-@font-face{
-	font-family: std-font;
-	src: url(fonts/Lato-Regular.ttf);
-}
-@font-face{
-	font-family: std-decorative;
-	src: url(fonts/Cakecafe.ttf);
-}
-
-.title{
-	font-family: std-decorative;
-	font-size: 300%;
-	font-weight: 200;
-}
-.main h2{ margin-top: 0;    }
-.main h1{ margin-bottom: 0; }
-.main *{text-align: center;}
-.main div{
-	border: 0.75vw solid var(--std-foreground);
-	margin-top: 10vh;
-	margin-left: 0;
-	animation: glow 5s infinite;
-	background-color: var(--std-background)
-}
-.main .skills, .main .sites{
-	height: 35vh;
-	width: 40vw;
-	border-left: none;
-	border-top-right-radius: 1vw;
-	border-bottom-right-radius: 1vw;
-}
-.main .skills li{
-	text-align: left;
-	margin-left: 10vw;
-	font-size: 125%;
-	font-weight: 1000;
-	margin-top: none;
-}
-.main .footer{
-	border-left: none;
-	border-right: none;
-	border-bottom: none;
-	padding-top: 1.5vh;
-}
-.main .website_info, .main .introduction, .main .credits{
-	border-right: none;
-	border-top-left-radius: 1vw;
-	border-bottom-left-radius: 1vw;
-	width: 40vw;
-	height: 35vh;
-	margin-left: auto;
-}
-.main * h3{
-	font-size: 275%;
-	text-align: left;
-	margin-left : 5vw;
-	font-weight: 100;
-	margin-bottom: 1vh;
-}
-.main * p, .main .skills li, .main .sites li, .main .credits li{
-	font-size: 125%;
-	text-align: left;
-	margin-left: 5vw;
-}
-
-a{
-	color: var(--red);
-}
+/* Global Variables */
 
 :root{
-	--red: #f7768e;
-	--blue: #7aa2f7;
-	--green: #9ece6a;
-	--magenta: #bb9af7;
-	--yellow: #e0af68;
-	--cyan: #7dcfff;
-	--white: #a9b1d6;
-	--black: #1d202f;
-	--std-background: #24283b;
-	--std-foreground: #c0caf5;
+	--red: #FC4850;
+	--blue: #59ADFF;
+	--green: #B5E742;
+	--purple: #CF60EA;
+	--yellow: #FAE800;
+	--orange: #F88922;
+	--background-col: black;
+	--text-col: white;
 }
 
-@keyframes glow{
-	0%{border-color: var(--border-color);}
-	16%{border-color: #f7768e;}
-	32%{ border-color: #9ece6a;}
-	48%{ border-color: #e0af68;}
-	64%{ border-color: #7aa2f7;}
-	80%{ border-color: #bb9af7;}
-	96%{border-color: var(--border-color)}
-	100%{border-color: var(--border-color)}
+@font-face{
+	font-family: std;
+	src: url("RethinkSans-VariableFont_wght.ttf");
 }
+@font-face{
+	font-family: emoji;
+	src: url("SymbolsNerdFont-Regular.ttf");
+}
+
+/* Start */
 
 body{
-	color: var(--white);
-	font-family: std-font;;
-	border-radius: 2vw;
-	padding: 0;
-	animation: glow 5s infinite;
-	border: 1.25vw var(--std-foreground) solid;
-	background-color: var(--std-background);
+	background-color: var(--background-col);
+	color: var(--text-col);
+	font-family: std;
+	scroll-behavior: smooth;
 }
 
-@media screen and (max-width : 500px){
-	body{
-		border: 4vw solid;
-	}
-	.main  div{
-		border: 3vw solid;
-	}
-	.main .website_info{
-		height: 75vh;
-	}
-	.main .website_info h3{
-		font-size: 225%;
-	}
-	.main .skills{
-		height: 60vh;
-	}
-	.main .introduction{
-		height: 60vh;
-	}
+
+.about, .skills, .contact, .projects{
+	margin-bottom: 80vh;
+}
+
+/* Introduction Part */
+
+.introduction{
+	height: 100vh;
+	background-color: var(--orange);
+	color: var(--white);
+	border-bottom: 2vw var(--white) solid;
+}
+
+.introduction header{
+	padding-top: 65vh;
+	font-weight: bold;
+	font-size: 325%;
+	margin-bottom: 0;
+}
+.introduction p{
+	font-size: 125%;
+	margin-top: 0;
+}
+
+.introduction button{
+	position: absolute;
+	left: 50%;
+	width: 9vw;
+	height: 3vw;
+	transform: translate(-50%, 50%);
+	background-color: var(--orange);
+	border: 0.5vw var(--background-col) solid;
+	font-size: 105%;
+	border-radius: 5vw;
+	color: var(--white);
+	transition: 0.5s all;
+	font-family: std;
+}
+
+.introduction button:hover{
+	background-color: var(--background-col);
+	cursor: pointer;
+}
+
+.introduction header, .introduction p, .introduction button{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.introduction img{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	border: 1vw solid var(--background-col);
+	border-radius: 90vw;
+	width: 15vw;
+	height: 15vw;
+}
+
+/* About Me Part */
+.about header{
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	background-color: var(--green);
+	text-align: center;
+	font-size: 225%;
+}
+
+.about p{
+	position: absolute;
+	left: 50%;
+	bottom: -65%;
+	transform: translate(-50%, 50%);
+	font-size: 225%;
+	text-align: center;
+	margin: auto;
+}
+
+/* Skills Part */
+
+.skills header{
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	background-color: var(--red);
+	text-align: center;
+	font-size: 225%;
+}
+
+.skills ul{
+	font-size: 225%;
+	position: absolute;
+	left: 50%;
+	bottom: -165%;
+	transform: translate(-50%, 50%);
+}
+/* Projects Part  */
+
+.projects{
+	margin-bottom: 50vh;
+}
+
+.projects header{
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	background-color: var(--purple);
+	text-align: center;
+	font-size: 225%;
+}
+
+.projects .bar{
+	width: 85vw;
+	background: gray;
+	margin: auto;
+	margin-top: 15vh;
+	border-radius: 100vw;
+	display: flex;
+	font-size: 150%;
+	flex-direction: row;
+}
+
+.projects .bar #Rust{
+	width: 21.5%;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	height: 100%;
+	text-align: center;
+	background-color: var(--red);
+}
+
+.projects .bar #Cs{
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	width: 76.5%;
+	text-align: center;
+	background-color: var(--green);
+}
+
+.projects .bar #HTML{
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	width: 7%;
+	text-align: center;
+	background-color: var(--orange);
+}
+
+.projects dl{
+	padding-left: 40%;
+	font-size: 125%;
+}
+
+/* Contact Part */
+
+
+.contact header{
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	background-color: var(--blue);
+	text-align: center;
+	font-size: 225%;
+}
+
+.contact dl, .contact p{
+	font-size: 175%;
+	text-align: center;
+}
+.contact .link{
+	padding-right: 1.75vw;
+}
+
+/* Other */
+
+* .link{
+	text-align: center;
+	 color: var(--orange);
+}
+p,button,h1,h2,header,li,ul,dd,dt,a{
+	font-family: std;
+}
+.emoji{
+	font-family: emoji;
+}
+
+/* Credits */
+.credits{
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	background-color: var(--yellow);
+	color: var(--background-col);
+	text-align: center;
+	font-size: 150%;
 }
