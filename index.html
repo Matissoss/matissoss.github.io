@@ -1,62 +1,18 @@
 <!DOCTYPE html>
-
 <html>
 	<head>
-		<title> Mateus Dev Website </title>
-		<link rel = "stylesheet" href = "main.css">
-		<link rel = "icon" href = "Avatar.svg">
+		<title> MateusDev Website </title>
+		<link href = "Avatar.svg" rel="icon">
+		<link href = "main.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Offical MateusDev Website">
+		<meta name="keywords" content="Rust,Developer,Poland,MateusDev,Matissoss">
+		<meta name="author" content="MateusDev">
+		<meta name="charset" content="UTF-8">
 	</head>
 	<body>
-		<div class = "introduction">
-			<img src = "Avatar.svg">
-			<header> Mateus Dev </header>
-			<p> Programmer from Poland </p>
-			<button onclick = "window.open('https://github.com/Matissoss')"> Learn more </button>
-		</div>
-		<div class = "about"> 
-			<header> 👋 About Me 👋 </header>
-			<p> I'm MateusDev - a programmer from Poland. <br> Rust, Neovim & Linux Enjoyer. </p>
-		</div>
-		<div class = "skills">
-			<header> 🚀 Skills 🚀 </header>
-			<ul>
-				<li> <a class = "emoji"></a> Rust </li>
-				<li> <a class = "emoji">󰚯</a> C# with Unity Game Engine</li>
-				<li> <a class = "emoji">󰖟</a> Basic WebDev (html, css) </li>
-				<li> <a class = "emoji"></a>  Linux </li>
-			</ul>
-		</div>
-		<div class = "projects">
-			<header> 🧰 Projects 🧰 </header>
-				<div class = "bar">
-					<div id = "Rust"> Rust </div>
-					<div id = "Cs"> C# </div>
-					<div id = "HTML"> HTML </div>
-				</div>
-			<dl>
-				<dt> Games on Itch.io profile </dt>
-				<dd> <a class = "link" href = "https://Matissoss.itch.io" target = "_blank"> Link </a> </dd>
-				<dt> Hcv - hex converter </dt>
-				<dd> <a class = "link" href = "https://github.com/Matissoss/hcv" target = "_blank">Link</a> </dd>
-				<dt> Imp_cv - imperial units converter </dt>
-				<dd> <a class = "link" href = "https://github.com/Matissoss/imp_cv" target = "_blank">Link</a> </dd>
-				<dt> This website </dt>
-				<dd> <a class = "link" href = "https://github.com/Matissoss/matissoss.github.io" target = "_blank">Link</a> </dd>
-			</dl>
-		</div>
-		<div class = "contact">
-			<header> 📨 Get in contact 📨 </header>
-			<p> Through: </p>
-			<dl>
-				<dt> Github </dt>
-				<dd> <a class = "link" href = "https://github.com/Matissoss" target = "_blank"> Link </a> </dd>
-				<dt> Twitter </dt>
-				<dd> <a class = "link" href = "https://x.com/@MateusDevPL" target = "_blank"> Link </a> </dd>
-
-				<dt> E-Mail </dt>
-				<dd> <a class = "link" href = "mailto:matissossGameDev@proton.me" target = "_blank"> Mail </a> </dd>
-			</dl>
-		</div>
-		<header class = "credits"> Credits <br> Coded by MateusDev, Font used: NerdFonts for emojis, Rethink Sans </header>
+		<main id="ROOT"></main>
+		<current><p id="CURRENT">[user]></p><p id='CURSOR'>_</p></current>
 	</body>
+	<script src='main.js' type='module'></script>
 </html>
