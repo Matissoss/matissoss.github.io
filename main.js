@@ -3,9 +3,10 @@
 import libstd from './std.js';
 
 // Global Constants
-const ROOT    = $("ROOT");
-const CURRENT = $("CURRENT");
+export const ROOT    = $("ROOT");
+export const CURRENT = $("CURRENT");
 // Global mutables
+export let is_input = false;
 let users = new Map();
 let current_user = "user";
 let history = [];
@@ -16,9 +17,14 @@ function $(html){
 }
 
 function main(){
-	libstd.std_output(
-		"Welcome to mateus' shell<br>Use 'commands' command to get all commands"
-	);
+	libstd.println("# # ### #   #   ###  #   # ### ### #   ##  #");
+	libstd.println("# # #   #   #   # #  #   # # # # # #   # # #");
+	libstd.println("### ### #   #   # #  # # # # # ##  #   # # #");
+	libstd.println("# # #   #   #   # #  ## ## # # # # #   # #  ");
+	libstd.println("# # ### ### ### ###  #   # ### # # ### ##  #");
+	libstd.println("============================================")
+	libstd.println("Welcome to mateus' shell, use 'commands' to ");
+	libstd.println("get all possible commands");
 	cursor();
 }
 
@@ -27,7 +33,6 @@ function handle_command(cmd){
 		return;
 	}
 	let args = split_by_whitespace(cmd);
-
 	if (args[0].startsWith("$") && args[1] != undefined){
 		let variable_name = slice_string(args[0], 0, args[0].length+1);
 		variables.set(variable_name, args[1]);
@@ -36,14 +41,14 @@ function handle_command(cmd){
 	else if (args[0].startsWith("$")){
 		let variable_name = slice_string(args[0], 0, args[0].length+1);
 		if (variables.get(variable_name) != undefined){
-			libstd.std_output(`${variables.get(variable_name)}`);
+			libstd.println(`${variables.get(variable_name)}`);
 		}
 		return;
 	}
 
 	switch (args[0]){
 		case "get":
-			if (args[1] !== undefined){
+			if (args[1] != undefined){
 				let variable_name = "";
 				if (args[1].startsWith("$")){
 					variable_name = slice_string(args[1], 0, args[1].length+1);
@@ -62,34 +67,24 @@ function handle_command(cmd){
 			}
 			break;
 		case "commands":
-			libstd.std_output(
-				`
-				Commands:<br>
-				aboutme   - gives you info about me<br>
-				user      - allows to login into users<br>
-				clear     - clear<br>
-				portfolio - shows portfolio<br>
-				clear history - clear history<br>
-				history   - show last commands<br>
-				lv        - list variables<br>
-				get [var] - get variable [var]<br>
-				$[var_name] [var_value] - declare variable [var_name] with value [var_value]<br>
-				And there are other easter egg commands ;)
-				`
-			);
+			libstd.println("Commands:");
+			libstd.println("aboutme        - gives you info about author of this 'website'");
+			libstd.println("user           - user simulation in this website");
+			libstd.println("clear          - explains itself");
+			libstd.println("clear history  - explains itself");
+			libstd.println("history        - explains itself");
+			libstd.println("lv             - lists variables in this session");
+			libstd.println("get $[var_name] - gets value of [var_name]");
+			libstd.println("And there other easter egg commands, good luck finding them ;)")
 			break;
 		case "sudo":
-			libstd.std_output(
-				`I'd just like to interject for a moment. 
-				What you’re referring to as Linux, is in fact, GNU/Linux, 
-				or as I’ve recently taken to calling it, GNU + Linux.`
-			);
+			libstd.println("I'd just like to interject for a moment.");
+			libstd.println("What you're referring to as Linux is in fact, GNU/Linux");
+			libstd.println("or as I've recently taken to calling it, GNU + Linux");
 			break;
 		case "rickroll":
 			window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUIcmlja3JvbGw%3D");
-			libstd.std_output(
-				`Never gonna give you up,<br>Never gonna let you down<br>[...]`
-			);
+			libstd.println("Never gonna give you up,\nNever gonna let you down\n[...]");
 			break;
 		case "lv":
 			let index_1 = 1;
@@ -102,71 +97,31 @@ function handle_command(cmd){
 			break;
 		case "aboutme":
 			if (args[1] === undefined){
-				libstd.std_output(
-					`
-					___aboutme<br>
-					This website was made by mateusdev<br>
-					using plain Javascript
-					`
+				libstd.std_output("Credits\nThis website was made by mateusdev, using plain Javascript"
 				);
 			}
-			else if (args[1] === '--help' || args[1] === '-h'){
-				libstd.std_output(
-					`___aboutme<br>
-					_SYNTAX<br>
-					aboutme [flags] [args]<br><br>
-					_FLAGS<br>
-					-h/--help = prints this message<br>
-					--itch/-i = prints all my itch.io games along with link to them<br>
-					--project/-p = prints all my github projects<br>
-					--social/-s = prints all my social profiles<br>
-					--skills/-sk = prints my skills :)<br>
-					`
-				);
+			else if (args[1] ==='--help' || args[1] === '-h'){
+				libstd.println("aboutme");
+				libstd.println(" SYNTAX");
+				libstd.println("  aboutme [flag] [args]");
+				libstd.println(" FLAGS");
+				libstd.println("-h/--help     -> prints this message");
+				libstd.println("--itch/-i     -> prints all my itch.io games along with link to them");
+				libstd.println("--project/-p  -> prints all my FOSS/OSS projects along with link to them");
+				libstd.println("--social/-s   -> prints all my social media accounts");
+				libstd.println("--skills/-sk  -> prints all my skills");
 			}
 			else if (args[1] === '--itch' || args[1] === '-i'){
-				libstd.std_output(
-					`
-					___aboutme<br>
-					_Link<br>
-					https://matissoss.itch.io<br>
-					_Form_URL<br>
-					https://matissoss.itch.io/$GAME_NAME<br>
-					_List<br>
-					Overhytm 		[overhytm]<br> 
-					CarmEco 		[carmeco]<br>
-					Switcher 		[switcher-game]<br>
-					Skeleton Graveyar 	[skeleton-graveyard]<br>
-					Switcher (PGJ 2024) 	[switcher]<br> 
-					Death Duo 		[death-duo]<br>
-					Fish vs Crabs 		[fish-vs-crabs]<br>
-					Freezing Torch 		[freezing-torch]<br>
-					Behind the doors 	[behind-the-doors]<br>
-					Space Flight 		[space-flight]<br>
-					`
+				libstd.println(
+					"https://matissoss.itch.io\nList\nOverhytm 		[overhytm]\nCarmEco 		[carmeco]\nSwitcher 		[switcher-game]\nSkeleton Graveyar 	[skeleton-graveyard]\nSwitcher (PGJ 2024) 	[switcher]\nDeath Duo 		[death-duo]\nFish vs Crabs 		[fish-vs-crabs]\nFreezing Torch 		[freezing-torch]\nBehind the doors 	[behind-the-doors]\nSpace Flight 		[space-flight]"
 				);
 			}
 			else if (args[1] === '--project' || args[1] === '-p'){
-				libstd.std_output(
-					`
-					___aboutme<br>
-					_Link<br> 
-					https://github.com/Matissoss<br>
-					_Projects<br>
-					mkb  - mateus' kanban board [/mkb]<br>
-					msat - mateus' school administration tool [/msat]<br>
-					[...]
-					`
-				);
+				libstd.println("Projects\nAll: https://github.com/Matissoss\nmkb - mateus' kanbban board [/mkb]\nmsat - mateus' school administration tool [/msat]")
 			}
 			else if (args[1] === '--social' || args[1] === '-s'){
-				libstd.std_output(
-					`
-					___aboutme<br>
-					_Socials<br>
-					Twitter (X): [https://x.com/@MateusDevPL]<br>
-					Youtube: [https://youtube.com/@MatissossGameDev]<br>
-					`
+				libstd.println(
+					`Socials\nTwitter: [https://x.com/@MateusDevPL]\nYoutube: [https://youtube.com/@MatissossGameDev]`
 				);
 			}
 			else if (args[1] === '--skills' || args[1] === '-sk'){
@@ -186,30 +141,17 @@ function handle_command(cmd){
 			let to_output = "";
 			let index = 1;
 			history.forEach((el) => {
-				to_output += `${index}. ${el}<br>`;
+				to_output += `${index}. ${el}\n`;
 				index++;
 			});
-			libstd.std_output(
-				`_History<br>
-				${to_output}`
-			);
+			libstd.println(`History\n\n${to_output}`);
 			break;
 		case "logo":
-			libstd.std_output(
-				`
-				--------------<br>
-				--------------<br>
-				-----&--&-----<br>
-				--------------<br>
-				----%%%%%%----<br>
-				--------------<br>
-				--------------<br>
-				--------------
-				`
-			);
+			libstd.println(
+			"----------\n----------\n---&--&---\n----------\n--%%%%%%--\n----------\n----------");
 			break;
 		case "clear":
-			if (args[1] !== undefined && args[1] === 'history'){
+			if (args[1] != undefined && args[1] === 'history'){
 				history = [];
 				break;
 			}
@@ -243,16 +185,16 @@ function handle_command(cmd){
 				users.forEach((_, user) => {
 					to_output += `${user}<br>`
 				});
-				libstd.std_output(to_output);
+				libstd.println(to_output);
 			}
 			else if (args[1] === '--login' || args[1] === '-lg'){
 				if (args[2] !== undefined && args[3] !== undefined){
 					if (users.get(args[2]) === args[3]){
-						libstd.std_output(`Succesfully logged into user ${args[2]}`);
+						libstd.println(`Succesfully logged into user ${args[2]}`);
 						current_user = args[2];
 					}
 					else{
-						libstd.std_output(`Couldn't log into user ${args[2]}`);
+						libstd.println(`Couldn't log into user ${args[2]}`);
 					}
 				}
 				else{
@@ -264,50 +206,42 @@ function handle_command(cmd){
 			}
 			break;
 		case "hello":
-			libstd.std_output("Good Morning");
+			libstd.println("Good Morning");
 			break;
 		case "whats":
 			if (args[1] === "up?" || args[1] === "up"){
-				libstd.std_output("I'm fine :)");
+				libstd.println("I'm fine :)");
 			}
 			break;
 		case "↑↑↓↓←→←→BA":
-			libstd.std_output("Isn't it konami code?");
+			libstd.println("Isn't it konami code?");
 			break;
 		case "coffee":
-			libstd.std_output(
-			`I'm teapot (tea is better, btw.)`);
-			break;
-		case "tea":
-			libstd.std_output(`I'm coffee brewer (coffee is better btw)`);
+			libstd.println("             ;,'");
+			libstd.println("     _o_    ;:;'");
+			libstd.println(" ,-.'---`.__ ;");
+			libstd.println("((j`=====',-'");
+			libstd.println(" `-\\     /");
+			libstd.println("    `-=-'");
+			libstd.println("418 I'm a teapot")
 			break;
 		case "portfolio":
-			libstd.std_output(
-				`
-				| portfolio<br>
-				|================<br>
-				| --------------<br>
-				| --------------<br>
-				| -----&--&-----<br>
-				| --------------<br>
-				| ----%%%%%%----<br>
-				| --------------<br>
-				| --------------<br>
-				| --------------<br>
-				|===============<br>
-				| name: MateusDev<br>
-				| country: Poland :pl:<br>
-				| age: I exist<br>
-				| email: matissossGameDev@proton.me<br>
-				|===============<br>
-				| skills<br>
-				|===============<br>
-				| Using Linux<br>
-				| Rust Programming Language<br>
-				| HTML/CSS/JS<br>
-				| C-like languages<br>
-				`
-			);
+			libstd.println("| portfolio");
+			libstd.println("|==============");
+			libstd.println(
+			"| ----------\n| ----------\n| ---&--&---\n| ----------\n| --%%%%%%--\n| ----------\n| ----------");
+			libstd.println("|==============");
+			libstd.println("| name    : MateusDev");
+			libstd.println("| country : Poland");
+			libstd.println("| age     : I exist");
+			libstd.println("| email   : matissossGameDev@proton.me");
+			libstd.println("|==============");
+			libstd.println("| skills");
+			libstd.println("|==============");
+			libstd.println("| - Linux");
+			libstd.println("| - Rust");
+			libstd.println("| - WebDev (HTML/CSS/JS)");
+			libstd.println("| - C-like languages (mostly C++)");
 			break;
 		case "whoami":
 			fetch ("https://api.ipify.org")
@@ -316,36 +250,34 @@ function handle_command(cmd){
 				fetch (`http://ip-api.com/json/${ip}?fields=524761`)
 				.then(response => response.json())
 				.then(data => {
-					libstd.std_output(`
-					You are ${ip}<br>Lan:${data.lat}<br>Lon:${data.lon}<br>
-					You live in ${data.country}, ${data.regionName}, ${data.city}<br>
-					Don't thank me :)
-					});
-				`)})});
+					libstd.println(
+					`You are ${ip}\nLan:${data.lat}\nLon:${data.lon}\nYou live in ${data.country}, ${data.regionName}, ${data.city}`);
+					libstd.println("Don't thank me :)");
+				})
+			});
 
 			break;
 		case "uname":
 			if (args[1] === '-a'){
-				libstd.std_output("F You OS Version 69")
+				libstd.println("F You OS Version 69")
 			}
 			break;
 		case "rm":
 			if (args[1] === '-rf' && args[2] == '/'){
-				libstd.std_output("This is not Linux");
+				libstd.println("This is not Linux");
 			}
 			break;
 		case "chatgpt":
-			libstd.std_output("i'm not artificial inteligence, i am stupid reality")
+			libstd.println("i'm not artificial inteligence, i am stupid reality")
 			break;
 		case "life":
-			libstd.std_output("life is beautiful, maybe not yours and not mine, but it is :)");
+			libstd.println("life is beautiful, maybe not yours and not mine, but it is :)");
 			break;
 		case "fortune":
-			libstd.std_output("you'll die tomorrow (if not, then it is joke)");
+			libstd.println("you'll die tomorrow (if not, then it is joke)");
 			break;
 		case "selfdestruct":
-			libstd.std_output("Proceeding with selfdestruction...");
-			handle_command("rickroll");
+			libstd.println("Proceeding with selfdestruction...");
 			break;
 		case "echo":
 			let sliced_array = [];
@@ -359,7 +291,7 @@ function handle_command(cmd){
 				sliced_array.push(args[i]);
 			}
 			let concat = concat_array(sliced_array);
-			libstd.std_output(concat);
+			libstd.println(concat);
 			break;
 		default:
 			libstd.std_error(`Unknown Command ${args[0]}, use 'commands' command`, -1);
@@ -374,7 +306,7 @@ document.addEventListener('keydown', (ev) => {
 	let key = ev.key;
 	keypressed = true;
 	if (key.length == 1){
-		CURRENT.innerHTML += key.toLowerCase();
+		CURRENT.innerHTML += key;
 	}
 	else if (key == "Backspace"){
 		delete_char();
@@ -412,9 +344,11 @@ function enter(cmd){
 	let _debug_user = `[${current_user}]>`
 	let command = slice_string(cmd, _debug_user.length+2, cmd.length+1);
 	node.innerHTML = `[${current_user}]>${command}`;
-	ROOT.appendChild(node)
-	handle_command(command);
-	CURRENT.innerHTML = `[${current_user}]>`;
+	ROOT.appendChild(node);
+	if (is_input){
+		handle_command(command);
+		CURRENT.innerHTML = `[${current_user}]>`;
+	}
 }
 
 function slice_string(string, start, end){

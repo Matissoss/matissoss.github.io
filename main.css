@@ -1,6 +1,6 @@
 @font-face{
 	font-family: std;
-	src: url(fonts/joystix-monospace.otf)
+	src: url(fonts/font-dos.ttf)
 }
 body{
 	background-color: black;
@@ -11,10 +11,16 @@ body{
 main{
 	display: flex;
 	flex-direction: column;
+}
+cmd{
 	font-size: 200%;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 }
 p{
 	margin: 0;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 	font-size: 200%;
 }
 current{
