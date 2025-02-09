@@ -1,29 +1,139 @@
+:root{
+	--main: #4D4646;
+	--main-light: #5B5656;
+	--text: #F5EAEA;
+	--accent: #f88922;
+}
+
 @font-face{
-	font-family: std;
-	src: url(fonts/font-dos.ttf)
+	font-family: reg;
+	src: url("fonts/ubuntu-reg.ttf")
 }
+
 body{
-	background-color: black;
-	color: #00ff00;
-	font-family: std;
-	font-weight: bolder;
+	background-color: var(--main);
+	color: var(--text);
 }
+
+body *{
+	font-family: reg;
+}
+
+nav{
+	display: flex;
+	flex-direction: row;
+	background-color: var(--main-light);
+	width: 60%;
+	padding: 2vh;
+	margin: auto;
+	font-size: 125%;
+}
+
+nav a{
+	margin: auto;
+
+}
+
+a{
+	color: var(--accent);
+}
+
+a::before{
+	content: "[ ";
+	color: var(--text)
+}
+a::after{
+	content: " ]";
+	color: var(--text)
+}
+
 main{
+	width: 60vw;
+	margin: auto;
+}
+
+article{
 	display: flex;
 	flex-direction: column;
 }
-cmd{
-	font-size: 200%;
-	white-space: pre-wrap;
-	word-wrap: break-word;
+article *{
+	margin-top: 1vh;
+	margin-bottom: 1vh;
 }
-p{
-	margin: 0;
-	white-space: pre-wrap;
-	word-wrap: break-word;
-	font-size: 200%;
+h1, h2, h3, h4, h5, h6{
+	color: var(--accent);
+	font-weight: bolder;
+	font-size: 175%;
 }
-current{
-	display: flex;
-	flex-direction: row;
+h1::before{
+	content: "# "
+}
+h2::before{
+	content: "## "
+}
+h3::before{
+	content: "### "
+}
+h4::before{
+	content: "#### "
+}
+h5::before{
+	content: "##### "
+}
+h6::before{
+	content: "###### "
+}
+hr{
+	width: 100%
+}
+bold{
+	font-weight: bold;
+}
+italic{
+	font-style: italic;
+}
+table{
+	border: 0.25vw solid var(--accent);
+}
+td{
+	border: 0.125vw solid var(--accent);
+	margin: auto;
+	text-align: center;
+}
+p, a{
+	font-size: 112%
+}
+
+img{
+	display: block;
+	margin: auto;
+	width: 12vw;
+	border: #000000 solid .25vw; 
+	border-radius: 100%;
+}
+
+ul li::marker{
+	content: "- "
+}
+
+@media only screen and (max-width: 900px){
+	nav{
+		width: 100vw;
+		flex-direction: column;
+		padding: 0;
+		padding-top: 1vh;
+		padding-bottom: 1vh;
+	}
+	nav *{
+		width: auto;
+		margin: auto;
+	}
+	nav a{
+		padding-top: 1vh;
+		padding-bottom: 1vh;
+		font-size: 150%;
+	}
+	main{
+		width: 100vw;
+	}
 }
