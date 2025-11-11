@@ -1,7 +1,10 @@
 :root{
 	--main: #121212;
 	--text: #f5f5f5;
-	--accent: #D87C4A
+	--accent: #aca1cf;
+}
+* {
+	font-family: monospace;
 }
 body{
 	background-color: var(--main);
@@ -44,9 +47,12 @@ h3, h1{
 	width: auto;
 	margin: auto;
 	margin-top: 0;
+	justify-content: space-around;
+	width: 20vw;
 }
 @media only screen and (max-width: 900px){
 	body {
+		font-size: 150%;
 		height: auto;
 		padding-top: 20vh;
 		width: 80vw;
@@ -54,6 +60,8 @@ h3, h1{
 	}
 	.main-row{
 		flex-direction: column;
+		margin: 0 auto;
+		width: 25vw;
 	}
 	main{
 		width: 100%;
