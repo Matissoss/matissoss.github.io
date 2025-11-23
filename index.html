@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> matissoss - home </title>
-		<link href = "avatar.png" rel="icon">
-		<link href = "main.css" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="matissoss' personal website">
-		<meta name="keywords" content="programming,dev,personal,website">
+		<title>matissoss - website</title>
+		<link rel="icon" href="avatar.png">
 		<meta name="author" content="matissoss">
 		<meta name="charset" content="UTF-8">
+		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
 		<main>
-			<img class='avatar' src='avatar.png' alt="avatar">
-			<h1>matissoss</h1>
-			<h3>minimalist with bloated ambitions</h3>
-			<div class='main-row'>
-				<a href='about.html'>about</a>
-				<a href='https://github.com/Matissoss?tab=repositories' target="_blank">projects</a>
-			</div>
+			<section id="main_row">
+				<div>
+					<img src="avatar.png" alt="avatar" id="avatar">
+					<h2 id="nickname">matissoss</h2>
+				</div>
+				<div id="main_column">
+					<div id="projects">
+						<h2>projects i'm "proud of"</h2>
+						<div id="proj_list">
+							<a href="https://github.com/Matissoss/polon"target="_blank">(WIP) polon toolchain project</a>
+							<a href="https://github.com/Matissoss/pasm" target="_blank">pasm x86-64 - polon x86-64 assembler</a>
+							<a href="https://github.com/Matissoss/t0"   target="_blank">t0 - tiny CPU architecture</a>
+							<a href="https://github.com/Matissoss/sxd"  target="_blank">sxd - simple hex dump</a>
+							<a href="https://github.com/Matissoss/pld"  target="_blank">(WIP) pld - polon linker</a>
+						</div>
+					</div>
+					<hr>
+					<div id="accounts">
+						<a href="https://youtube.com/@mateusdevpl" target="_blank">youtube</a>
+						<a href="https://github.com/Matissoss" target="_blank">github</a>
+						<a href="https://matissoss.itch.io" target="_blank">itch.io</a>
+					</div>
+				</div>
+			</section>
+			<p id="aboutme">Self-taught programmer from Poland 🇵🇱, mostly interested in low-level and compiler-dev.</p>
 		</main>
 	</body>
 </html>
