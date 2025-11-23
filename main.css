@@ -12,9 +12,9 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 99vh;
-	width: 100vw;
-	overflow: hidden;
+	height: 98vh;
+	width: 99vw;
+	overflow-x: hidden;
 }
 
 main {
