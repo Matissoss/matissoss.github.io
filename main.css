@@ -34,6 +34,7 @@ main {
 
 #avatar {
 	width: 25vw;
+	height: 25vw;
 	display: block;
 	border-bottom: var(--border-size) solid white;
 	border-right: var(--border-size) solid white;
@@ -122,6 +123,7 @@ hr {
 	}
 	#avatar {
 		width: 90vw;
+		height: 90vw;
 		border-right: none;
 	}
 	#nickname {
