@@ -3,12 +3,15 @@
 }
 
 :root {
-	--border-size: 0.25vw;
+	--bg-color: #101010;
+	--txt-color: #aca1cf;
+	--accent-color: #9b90be;
+	--border-size: 0.5vw;
 }
 
 body {
-	background-color: #212121;
-	color: white;
+	background-color: var(--bg-color);
+	color: var(--txt-color);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -22,13 +25,13 @@ main {
 
 	display: flex;
 	flex-direction: column;
-	border: var(--border-size) solid white;
+	border: var(--border-size) solid var(--txt-color);
 }
 
 #main_row {
 	display: flex;
 	flex-direction: row;
-	border-bottom: var(--border-size) solid white;
+	border-bottom: var(--border-size) solid var(--txt-color);
 	border-collapse: collapse;
 }
 
@@ -36,8 +39,8 @@ main {
 	width: 25vw;
 	height: 25vw;
 	display: block;
-	border-bottom: var(--border-size) solid white;
-	border-right: var(--border-size) solid white;
+	border-bottom: var(--border-size) solid var(--txt-color);
+	border-right: var(--border-size) solid var(--txt-color);
 }
 
 #proj_list {
@@ -52,7 +55,7 @@ main {
 
 a {
 	display: block;
-	color: white;
+	color: var(--txt-color);
 	text-decoration: none;
 }
 
@@ -83,7 +86,7 @@ a::after {
 	text-align: center;
 	font-size: 130%;
 	line-height: 5vh;
-	border-right: var(--border-size) solid white;
+	border-right: var(--border-size) solid var(--txt-color);
 }
 
 #aboutme {
@@ -96,7 +99,7 @@ hr {
 	border: none;
 	width: auto;
 	margin: 0;
-	background-color: white;
+	background-color: var(--txt-color);
 }
 
 #accounts {
@@ -128,7 +131,7 @@ hr {
 	}
 	#nickname {
 		border-right: none;
-		border-bottom: var(--border-size) solid white;
+		border-bottom: var(--border-size) solid var(--txt-color);
 	}
 	#main_column {
 		width: 90vw;
