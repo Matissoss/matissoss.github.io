@@ -1,151 +1,130 @@
 * {
-	font-family: monospace;	
+	font-family: monospace;
+	margin: 0;
+	padding: 0;
 }
 
 :root {
-	--bg-color: #101010;
-	--txt-color: #aca1cf;
-	--accent-color: #9b90be;
-	--border-size: 0.5vw;
+	--bg-color: #212121;
+	--txt-color:  #aca1cf;
+	--txt-d-color:#796e9d; 
+	--border-sz: 0.75vw;
+
+	--main-width: 75vw;
+	--main-height: 80vh;
+
+	--img-sz: calc((var(--main-width) / 2) - var(--border-sz) * 2);
+	--txt-p-size: 1.5em;
 }
 
 body {
 	background-color: var(--bg-color);
 	color: var(--txt-color);
+	font-size: var(--txt-p-size);
+}
+
+.row {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 98vh;
-	width: 99vw;
-	overflow-x: hidden;
+	flex-direction: row;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+#avatar img {
+	width: var(--img-sz);
+	height: var(--img-sz);
+	outline: var(--border-sz) var(--txt-color) solid;
+	display: block;
+}
+
+#avatar h1 {
+	display: block;
+	margin: var(--border-sz) 0;
+	line-height: calc(var(--main-height) - var(--img-sz) - (var(--border-sz) * 3));
+	text-align: center;
+	outline: var(--border-sz) var(--txt-color) solid;
 }
 
 main {
-	width: 50vw;
+	width: calc(var(--main-width) - (var(--border-sz) * 2));
+	height: calc(var(--main-height) - (var(--border-sz) * 2));
+	margin: calc((100vh - var(--main-height)) / 2) auto 0 auto;
+	border: var(--border-sz) var(--txt-color) solid;
+}
 
+#about {
 	display: flex;
 	flex-direction: column;
-	border: var(--border-size) solid var(--txt-color);
+	height: calc(var(--main-height) - (var(--border-sz) * 2));
+	padding: 0 var(--border-sz);
+	align-items: stretch;
 }
 
-#main_row {
-	display: flex;
-	flex-direction: row;
-	border-bottom: var(--border-size) solid var(--txt-color);
-	border-collapse: collapse;
-}
 
-#avatar {
-	width: 25vw;
-	height: 25vw;
-	display: block;
-	border-bottom: var(--border-size) solid var(--txt-color);
-	border-right: var(--border-size) solid var(--txt-color);
-}
 
-#proj_list {
-	display: flex;
-	flex-direction: column;
-}
-
-#proj_list a {
-	margin: auto 0;
-	font-size: 125%;
+.block {
+	border-bottom: var(--border-sz) var(--txt-color) solid;
+	width: calc(var(--img-sz) + (var(--border-sz)) - 1em);
+	padding-left: 1em;
 }
 
 a {
-	display: block;
+	line-height: 2.25em;
 	color: var(--txt-color);
-	text-decoration: none;
 }
 
 a:hover {
-	cursor: pointer;
-	color: #606060;
+	color: var(--txt-d-color);
 }
 
 a::before {
-	content: "[";
+	content: "[ ";
 }
 a::after {
-	content: "]";
+	content: " ]";
 }
 
-#projects {
-	width: 25vw;
-	height: 25vw;
-}
-#projects h2 {
-	padding-top: 2vh;
-	margin-top: 0;
-	text-align: center;
-}
-
-#nickname {
-	margin: 0;
-	text-align: center;
-	font-size: 130%;
-	line-height: 5vh;
-	border-right: var(--border-size) solid var(--txt-color);
+#projs {
+	flex: 4;
 }
 
 #aboutme {
+	flex: 1;
+}
+
+#socials {
+	flex: 0.52;
+	align-content: space-around;
+	width: calc(var(--img-sz) + (var(--border-sz)));
+	padding-left: 0;
 	text-align: center;
-	font-size: 130%;
-}
-
-hr {
-	height: var(--border-size);
-	border: none;
-	width: auto;
-	margin: 0;
-	background-color: var(--txt-color);
-}
-
-#accounts {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	line-height: 5vh;
-}
-
-#accounts a {
-	font-size: 120%;
+	border-bottom: none;
 }
 
 @media only screen and (orientation: portrait) {
 	:root {
-		--border-size: 0.5vw;
+		--border-sz: 1vh;
+		--main-width: 90vw;
+		--main-height: 80vh;
+		--txt-p-size: 250%;
 	}
-	main {
-		font-size: 200%;
-		width: 90vw;
+	.block {
+		padding: 0;
+		width: calc(var(--img-sz) + (var(--border-sz)));
 	}
-	#main_row {
+	h1 {
+		text-align: center;
+	}
+	#aboutme p {
+		line-height: 2em;
+		font-size: 1em;
+	}
+	#socials {
+		display: flex;
+		align-items: center;
 		flex-direction: column;
-	}
-	#avatar {
-		width: 90vw;
-		height: 90vw;
-		border-right: none;
-	}
-	#nickname {
-		border-right: none;
-		border-bottom: var(--border-size) solid var(--txt-color);
-	}
-	#main_column {
-		width: 90vw;
-	}
-	#projects {
-		padding: 2vh 0;
-		width: 90vw;
-		height: auto;
-	}
-	#projects h2 {
-		padding-top: 0;
-	}
-	#projects a {
-		font-size: 130%;
-		padding: 1vh 0;
 	}
 }
