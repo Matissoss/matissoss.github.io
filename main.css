@@ -43,6 +43,7 @@ body {
 #avatar h1 {
 	display: block;
 	margin: var(--border-sz) 0;
+	height: calc(var(--main-height) - var(--img-sz) - (var(--border-sz) * 3));
 	line-height: calc(var(--main-height) - var(--img-sz) - (var(--border-sz) * 3));
 	text-align: center;
 	outline: var(--border-sz) var(--txt-color) solid;
@@ -88,15 +89,15 @@ a::after {
 }
 
 #projs {
-	flex: 4;
+	flex: 8;
 }
 
 #aboutme {
-	flex: 1;
+	flex: 6;
 }
 
 #socials {
-	flex: 0.52;
+	flex: 1;
 	align-content: space-around;
 	width: calc(var(--img-sz) + (var(--border-sz)));
 	padding-left: 0;
@@ -109,7 +110,7 @@ a::after {
 		--border-sz: 1vh;
 		--main-width: 90vw;
 		--main-height: 80vh;
-		--txt-p-size: 250%;
+		--txt-p-size: 170%;
 	}
 	.block {
 		padding: 0;
