@@ -110,11 +110,17 @@ a::after {
 		--border-sz: 1vh;
 		--main-width: 90vw;
 		--main-height: 80vh;
-		--txt-p-size: 170%;
+		--txt-p-size: 230%;
 	}
 	.block {
 		padding: 0;
 		width: calc(var(--img-sz) + (var(--border-sz)));
+	}
+	#avatar h1 {
+		writing-mode: vertical-rl;
+		text-orientation: upright;
+		line-height: var(--img-sz);
+		font-size: 200%;
 	}
 	h1 {
 		text-align: center;
